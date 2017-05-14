@@ -6,7 +6,7 @@ import {} from 'react-bootstrap'
 class searchInput extends React.Component {
     render () {
         return (
-
+            <input type="text"/>
         )
     }
 }
