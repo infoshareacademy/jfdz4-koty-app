@@ -1,3 +1,12 @@
-/**
- * Created by MKwestorowski on 14.05.2017.
- */
+import React from 'react'
+import {} from 'react-bootstrap'
+
+
+
+class searchInput extends React.Component {
+    render () {
+        return (
+
+        )
+    }
+}
