@@ -3,10 +3,14 @@ import {} from 'react-bootstrap'
 
 
 
-class searchInput extends React.Component {
-    render () {
+function SearchInput (props){
+
         return (
             <input type="text"/>
         )
-    }
 }
+
+
+
+
+export default SearchInput
