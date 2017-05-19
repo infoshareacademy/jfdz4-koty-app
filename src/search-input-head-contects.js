@@ -1,13 +1,14 @@
 import React from 'react'
-import {} from 'react-bootstrap'
+import {InputGroup} from 'react-bootstrap'
 
 
 
 function SearchInput (props){
 
         return (
-            <input type="text"/>
-        )
+
+            <input type="text" placeholder="Szukaj.."/>
+                )
 }
 
 
