@@ -12,8 +12,9 @@ class App extends Component {
   render() {
     return (
       <div>
+          <BasicExample/>
         <SearchInput userName="znajdz to czego szukasz..." message="Znajdz najtańszy produkt"/>
-        <BasicExample/>
+
       </div>
     );
   }
@@ -24,11 +25,10 @@ class App extends Component {
 const BasicExample = () => (
     <Router>
       <div>
-        <ul>
+        <ul style={{float : 'right'}}>
            <li><Link to="/LogIn">Zaloguj się</Link></li>
         </ul>
-
-        <hr/>
+          <hr style={{width : '100%'}}/>
 
         <Route exact path="/LogIn" component={LogIn}/>
 
