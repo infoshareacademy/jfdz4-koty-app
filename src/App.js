@@ -1,21 +1,39 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import {
+    BrowserRouter as Router,
+    Route,
+    Link
+} from 'react-router-dom'
 import './App.css';
+import LogIn from './login'
+import SearchInput from './search-input-head-contects'
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div>
+          <BasicExample/>
+        <SearchInput userName="znajdz to czego szukasz..." message="Znajdz najtańszy produkt"/>
+
       </div>
     );
   }
 }
+
+
+
+const BasicExample = () => (
+    <Router>
+      <div>
+        <ul style={{float : 'right'}}>
+           <li><Link to="/LogIn">Zaloguj się</Link></li>
+        </ul>
+          <hr style={{width : '100%'}}/>
+
+        <Route exact path="/LogIn" component={LogIn}/>
+
+      </div>
+    </Router>
+)
 
 export default App;
