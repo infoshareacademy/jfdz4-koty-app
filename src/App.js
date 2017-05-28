@@ -5,35 +5,40 @@ import {
     Link
 } from 'react-router-dom'
 import './App.css';
-import LogIn from './login'
-import SearchInput from './search-input-head-contects'
+import Login from './login'
+import data from './database/productsBase.json'
+import Select from 'react-select';
+import 'react-select/dist/react-select.css';
+
+const BasicExample = () => (
+    <Router>
+        <div>
+            <div style={{textAlign: 'right'}}>
+                <ul style={{listStyle: 'none'}}>
+                    <li><Link to="/LoginNoFB"><Login/></Link></li>
+                    <li><Link to="/LoginNoFB">Zaloguj bez facebooka</Link></li>
+                </ul>
+            </div>
+            <hr/>
+
+            {/*<Route exact path="/Login" component={Login}/>*/}
+            {/*<Route exact path="/LoginNoFB" component={Login}/>*/}
+
+        </div>
+    </Router>
+)
 
 class App extends Component {
   render() {
     return (
       <div>
           <BasicExample/>
-        <SearchInput userName="znajdz to czego szukasz..." message="Znajdz najtańszy produkt"/>
-
+          <div style={{width: '40%', margin: '0 auto', marginTop: '200px'}}>
+              <Select/>
+          </div>
       </div>
     );
   }
 }
-
-
-
-const BasicExample = () => (
-    <Router>
-      <div>
-        <ul style={{float : 'right'}}>
-           <li><Link to="/LogIn">Zaloguj się</Link></li>
-        </ul>
-          <hr style={{width : '100%'}}/>
-
-        <Route exact path="/LogIn" component={LogIn}/>
-
-      </div>
-    </Router>
-)
 
 export default App;

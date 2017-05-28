@@ -1,14 +1,24 @@
-
 import React from 'react'
 
-function LogIn() {
-    return(
-        <div class="fb-login-button" data-width="200" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"/>
+import FacebookLogin from 'react-facebook-login'
 
-    )
+const responseFacebook = (response) => {
+    console.log(response);
 }
 
+function Login (){
+    return (
+    <FacebookLogin
+        appId="1088597931155576"
+        autoLoad={true}
+        fields="name,email,picture"
+        onClick={null}
+        callback={responseFacebook}
+        cssClass="my-facebook-button-class"
+        icon="fa-facebook"/>
+)}
 
 
 
-export default LogIn
+
+export default Login
