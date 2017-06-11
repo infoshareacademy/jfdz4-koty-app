@@ -1,5 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { Table } from 'react-bootstrap'
+
+import FilterProducts from './FilterProducts'
 
 export default connect(
     state => ({
@@ -28,7 +31,8 @@ export default connect(
         render() {
             return (
                 <div>
-                    <h1>Products</h1>
+
+
                     {
                         this.props.products.fetching ? 'Pobieranie produktów...' : null
                     }
@@ -39,13 +43,33 @@ export default connect(
 
                     {
                         this.props.products.data !== null ?
-                            <ul>
+
+                            <Table striped bordered condensed hover>
+                            <thead>
+                            <tr>
+                                <th>ZDJĘCIE</th>
+                                <th>NAZWA PRODUKTU</th>
+                                <th>CENA</th>
+                                <th>OCENA</th>
+                                <th>SZCZEGOŁY PRODUKTU</th>
+
+                            </tr>
+                            </thead>
+                            <tbody>
                                 {
                                     this.props.products.data.map(
-                                        product => <li key={product.id}>{product.name}{product.price}</li>
+                                        product => <tr key={product.id}>
+                                            <td><img src={product.image}/></td>
+                                            <td>{product.name}</td>
+                                            <td>{product.price}</td>
+                                            <td>{product.review}</td>
+                                            <td>SZCZEGÓŁY</td>
+                                        </tr>
                                     )
                                 }
-                            </ul> : null
+                            </tbody>
+                            </Table>: null
+
                     }
                 </div>
             )
