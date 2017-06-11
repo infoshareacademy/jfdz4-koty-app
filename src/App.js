@@ -5,7 +5,7 @@ import {
     Link
 } from 'react-router-dom'
 import './App.css';
-import LogIn from './login'
+import Login from './login'
 import SearchInput from './search-input-head-contects'
 
 class App extends Component {
