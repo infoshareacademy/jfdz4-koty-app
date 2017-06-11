@@ -1,8 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { Table } from 'react-bootstrap'
+import { Table, FormControl } from 'react-bootstrap'
 
-import FilterProducts from './FilterProducts'
 
 export default connect(
     state => ({
@@ -31,6 +30,8 @@ export default connect(
         render() {
             return (
                 <div>
+                    <FormControl>
+                    </FormControl>
 
 
                     {
@@ -44,7 +45,7 @@ export default connect(
                     {
                         this.props.products.data !== null ?
 
-                            <Table striped bordered condensed hover>
+                            <Table striped bordered condensed hover style={{textAlign: 'center'}}>
                             <thead>
                             <tr>
                                 <th>ZDJĘCIE</th>
@@ -55,15 +56,15 @@ export default connect(
 
                             </tr>
                             </thead>
-                            <tbody>
+                            <tbody >
                                 {
                                     this.props.products.data.map(
                                         product => <tr key={product.id}>
-                                            <td><img src={product.image}/></td>
-                                            <td>{product.name}</td>
-                                            <td>{product.price}</td>
-                                            <td>{product.review}</td>
-                                            <td>SZCZEGÓŁY</td>
+                                            <td style={{verticalAlign: 'middle'}}><img src={product.image}/></td>
+                                            <td style={{verticalAlign: 'middle'}}>{product.name}</td>
+                                            <td style={{verticalAlign: 'middle'}}>{product.price}</td>
+                                            <td style={{verticalAlign: 'middle'}}>{product.review}</td>
+                                            <td style={{verticalAlign: 'middle'}}>SZCZEGÓŁY</td>
                                         </tr>
                                     )
                                 }
