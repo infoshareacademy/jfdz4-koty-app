@@ -1,1 +1,0 @@
-# jfdz4-koty-app
