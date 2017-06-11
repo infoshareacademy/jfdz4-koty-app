@@ -2,7 +2,6 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { Table } from 'react-bootstrap'
 
-import FilterProducts from './FilterProducts'
 
 export default connect(
     state => ({
