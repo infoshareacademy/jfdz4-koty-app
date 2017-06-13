@@ -60,7 +60,7 @@ export default connect(
                                 {
                                     this.props.products.data.map(
                                         product => <tr key={product.id}>
-                                            <td style={{verticalAlign: 'middle'}}><img src={product.image} alt={image}/></td>
+                                            <td style={{verticalAlign: 'middle'}}><img src={product.image} alt={'freezer'}/></td>
                                             <td style={{verticalAlign: 'middle'}}>{product.name}</td>
                                             <td style={{verticalAlign: 'middle'}}>{product.price}</td>
                                             <td style={{verticalAlign: 'middle'}}>{product.review}</td>
