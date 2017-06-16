@@ -4,15 +4,12 @@ import React from 'react';
 //     Route,
 //     Link
 // } from 'react-router-dom'
-import Products from './Products'
-import MyComponent from './logIn';
-
+import Products from './Students'
 
 export default class extends React.Component {
     render() {
         return (
             <div>
-             <MyComponent/>
 
             <Products/>
             </div>
