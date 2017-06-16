@@ -1,3 +1,3 @@
-import createFetchingReducer from './_utils/createFetchingReducer'
-
-export default createFetchingReducer('products')
+// import createFetchingReducer from './_utils/createFetchingReducer'
+//
+// export default createFetchingReducer('products')
