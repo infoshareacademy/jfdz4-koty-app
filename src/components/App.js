@@ -1,11 +1,15 @@
-import React from 'react';
+import React from 'react'
+import SignUpForm from './SignUpForm'
+import SignInForm from './SignInForm'
 // import {
 //     BrowserRouter as Router,
 //     Route,
 //     Link
 // } from 'react-router-dom'
+
+
 import Products from './Search'
-import MyComponent from './logIn';
+import MyComponent from './FacebooklogIn';
 
 
 export default class extends React.Component {
@@ -13,6 +17,8 @@ export default class extends React.Component {
         return (
             <div>
              <MyComponent/>
+                <SignUpForm/>
+                <SignInForm/>
 
             <Products/>
             </div>
