@@ -4,7 +4,7 @@ import React from 'react';
 //     Route,
 //     Link
 // } from 'react-router-dom'
-import Products from './Products'
+import Products from './Search'
 import MyComponent from './logIn';
 
 
