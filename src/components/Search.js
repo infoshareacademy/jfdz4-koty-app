@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { Table} from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 export default connect(
     state => ({
@@ -67,7 +68,7 @@ export default connect(
                                                             <td style={{verticalAlign: 'middle'}}>{product.name}</td>
                                                             <td style={{verticalAlign: 'middle'}}>{product.price}</td>
                                                             <td style={{verticalAlign: 'middle'}}>{product.review} / 5</td>
-                                                            <td style={{verticalAlign: 'middle'}}>SZCZEGÓŁY</td>
+                                                            <td style={{verticalAlign: 'middle'}}><Link to={'/products/' + product.id}>Szczegóły</Link></td>
                                                         </tr>
                                                     )
                                                 }
