@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-// import { Table} from 'react-bootstrap'
+import { Table} from 'react-bootstrap'
 
 
 export default connect(
@@ -39,25 +39,48 @@ export default connect(
                     <div>
                         <input value={searchPhrase} onChange={setSearchPhrase}/>
                         <ul>
-                            { products
-                                 === null ?
-                                    null :
-                                    products.filter(
-                                        product => searchPhrase === '' ? false : (
-                                            searchPhrase.split('').every(
-                                                letter => product.name.toLowerCase().includes(letter.toLowerCase())
-                                            )
-                                        )
-                                    ).slice(0, 10).map(
-                                        product => (
-                                            <li key={product.id}>
-                                                {product.name}
-                                            </li>
-                                        )
-                                    )
+                            {
+
+                                            <Table striped bordered condensed hover style={{textAlign: 'center'}}>
+                                                <thead>
+                                                <tr>
+                                                    <th>ZDJĘCIE</th>
+                                                    <th>NAZWA PRODUKTU</th>
+                                                    <th>CENA</th>
+                                                    <th>OCENA</th>
+                                                    <th>SZCZEGOŁY PRODUKTU</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody >
+                                                {
+                                                    products
+                                                    === null ?
+                                                        null :
+                                                        products.filter(
+                                                            product => searchPhrase === '' ? false : (
+                                                                searchPhrase.split('').every(
+                                                                    letter => product.name.toLowerCase().includes(letter.toLowerCase())
+                                                                )
+                                                            )
+                                                        ).slice(0, 10).map(
+                                                        product => <tr key={product.id}>
+                                                            <td style={{verticalAlign: 'middle'}}><img src={product.image}/></td>
+                                                            <td style={{verticalAlign: 'middle'}}>{product.name}</td>
+                                                            <td style={{verticalAlign: 'middle'}}>{product.price}</td>
+                                                            <td style={{verticalAlign: 'middle'}}>{product.review}</td>
+                                                            <td style={{verticalAlign: 'middle'}}>SZCZEGÓŁY</td>
+                                                        </tr>
+                                                    )
+                                                }
+                                                </tbody>
+                                            </Table>
+
+
                             }
                         </ul>
                     </div>
+
+
 
 
 
