@@ -2,7 +2,6 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { Table} from 'react-bootstrap'
 
-
 export default connect(
     state => ({
         products: state.products,
@@ -67,7 +66,7 @@ export default connect(
                                                             <td style={{verticalAlign: 'middle'}}><img src={product.image}/></td>
                                                             <td style={{verticalAlign: 'middle'}}>{product.name}</td>
                                                             <td style={{verticalAlign: 'middle'}}>{product.price}</td>
-                                                            <td style={{verticalAlign: 'middle'}}>{product.review}</td>
+                                                            <td style={{verticalAlign: 'middle'}}>{product.review} / 5</td>
                                                             <td style={{verticalAlign: 'middle'}}>SZCZEGÓŁY</td>
                                                         </tr>
                                                     )
