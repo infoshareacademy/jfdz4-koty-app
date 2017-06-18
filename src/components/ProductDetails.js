@@ -19,7 +19,7 @@ export default class Product extends React.Component {
             })
         )
     }
-}
+
 
     render() {
 
@@ -39,4 +39,4 @@ export default class Product extends React.Component {
         </div>
     )
 
-    }
+}
