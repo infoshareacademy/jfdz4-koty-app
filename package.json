@@ -5,6 +5,7 @@
   "dependencies": {
     "bootstrap": "^3.3.7",
     "facebook-login": "^1.4.0",
+    "isomorphic-fetch": "^2.2.1",
     "prop-types": "^15.5.8",
     "react": "^15.5.4",
     "react-bootstrap": "^0.31.0",
