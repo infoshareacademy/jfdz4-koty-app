@@ -23,20 +23,21 @@ export default class Product extends React.Component {
 
     render() {
 
-    const productId = parseInt(this.props.match.params.productId, 10)
-    const product = this.state.products.find(
-        product => product.id === productId
-    )
+        const productId = parseInt(this.props.match.params.productId, 10)
+        const product = this.state.products.find(
+            product => product.id === productId
+        )
 
-    return (
-        <div>
-            <H1> {product.name} </H1>
-            <img src={product.image}/>
-            <p> Ocena klientów: {product.price}</p>
-            <p> OPIS: </p>
-            <p> Super najlepsza rzecz na świecie! </p>
+        return (
+            <div>
+                <h1> {product.name} </h1>
+                <img src={product.image}/>
+                <p> Ocena klientów: {product.price}</p>
+                <p> OPIS: </p>
+                <p> Super najlepsza rzecz na świecie! </p>
 
-        </div>
-    )
+            </div>
+        )
 
+    }
 }
