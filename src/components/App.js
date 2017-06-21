@@ -15,6 +15,7 @@ import {IndexLinkContainer, LinkContainer} from 'react-router-bootstrap'
 import Products from './Search'
 import ProductDetails from './ProductDetails'
 import MyComponent from './logIn';
+import SignUpForm from './SignUp';
 import './App.css'
 
 
@@ -33,6 +34,10 @@ const App = () => (
 
                     <LinkContainer to="/logIn">
                         <NavItem>Zaloguj się</NavItem>
+                    </LinkContainer>
+
+                    <LinkContainer to="/SignUp">
+                    <NavItem>Załóż konto</NavItem>
                     </LinkContainer>
 
 
