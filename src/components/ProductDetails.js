@@ -26,17 +26,18 @@ export default class Product extends React.Component {
     }
     render() {
 
-        const productId = parseInt(this.props.match.params.productId)
+        const productId = parseInt(this.props.match.params.productId, 1)
         const product = this.state.products.find(
             product => product.id === productId
         )
+
 
         return ( <div>
 
                 { product
                 === undefined ? <div>Fetching</div> :
                     <div>
-                        <h1> {this.props.products.name} </h1>
+                        <h1> {product.name} </h1>
                         <img src={product.image}/>
                         <p> Ocena klientów: {product.price}</p>
                         <p> OPIS: </p>
