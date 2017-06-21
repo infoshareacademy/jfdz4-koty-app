@@ -23,7 +23,6 @@ class Product extends React.Component {
 
     render() {
 
-        if (product === undefined) { return <div>fetching products... </div> }
 
         const productId = parseInt(this.props.match.params.productId, 10)
         const product = this.state.products.find(
@@ -33,17 +32,22 @@ class Product extends React.Component {
         console.log(product)
 
         return (
-            <div>
-                <h1> {product.name} </h1>
-                <img src={product.image}/>
-                <p> Ocena klientów: {product.price}</p>
-                <p> OPIS: </p>
-                <p> Super najlepsza rzecz na świecie! </p>
 
+            <div>
+                {product === undefined ? <div> Fetching</div> :
+                    <div>
+                        <h1> {product.name} </h1>
+                        <img src={product.image}/>
+                        <p> Ocena klientów: {product.price}</p>
+                        <p> OPIS: </p>
+                        <p> Super najlepsza rzecz na świecie! </p>
+                    </div>
+                }
             </div>
         )
-
     }
 }
+
+
 
 export default Product
