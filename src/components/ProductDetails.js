@@ -3,7 +3,7 @@ import React from 'react'
 export default class Product extends React.Component {
 
     constructor(props) {
-        super(props)
+        super(props);
 
         this.state = {
             products: []
@@ -26,10 +26,10 @@ export default class Product extends React.Component {
     }
     render() {
 
-        const productId = parseInt(this.props.match.params.productId, 1)
+        const productId = parseInt(this.props.match.params.productId, 10);
         const product = this.state.products.find(
             product => product.id === productId
-        )
+        );
 
 
         return ( <div>
