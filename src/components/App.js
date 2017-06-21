@@ -27,7 +27,7 @@ const App = () => (
                         <NavItem>Home</NavItem>
                     </IndexLinkContainer>
 
-                    <LinkContainer to="/Search">
+                    <LinkContainer to="/search">
                         <NavItem>Szukaj produktów!</NavItem>
                     </LinkContainer>
 
@@ -41,8 +41,8 @@ const App = () => (
 
 
             <Route path="/logIn" component={MyComponent}/>
-            <Route exact path="/Search" component={Products}/>
-            <Route path="/Search/:productId" component={ProductDetails}/>
+            <Route exact path="/products" component={Products}/>
+            <Route path="/products/:productId" component={ProductDetails}/>
         </Grid>
     </Router>
 )

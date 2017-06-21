@@ -9,6 +9,10 @@ export default class Product extends React.Component {
             products: []
         }
 
+
+    }
+
+    componentWillMount() {
         fetch(
             process.env.PUBLIC_URL + '/data/productsBase.json'
         ).then(
@@ -18,25 +22,28 @@ export default class Product extends React.Component {
                 products: products
             })
         )
+
     }
-
-
     render() {
 
-        const productId = parseInt(this.props.match.params.productId, 10)
+        const productId = parseInt(this.props.match.params.productId)
         const product = this.state.products.find(
             product => product.id === productId
         )
 
-        return (
-            <div>
-                <h1> {product.name} </h1>
-                <img src={product.image}/>
-                <p> Ocena klientów: {product.price}</p>
-                <p> OPIS: </p>
-                <p> Super najlepsza rzecz na świecie! </p>
+        return ( <div>
 
+                { product
+                === undefined ? <div>Fetching</div> :
+                    <div>
+                        <h1> {this.props.products.name} </h1>
+                        <img src={product.image}/>
+                        <p> Ocena klientów: {product.price}</p>
+                        <p> OPIS: </p>
+                        <p> Super najlepsza rzecz na świecie! </p>
+                    </div>}
             </div>
+
         )
 
     }
