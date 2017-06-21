@@ -23,10 +23,14 @@ class Product extends React.Component {
 
     render() {
 
+        if (product === undefined) { return <div>fetching products... </div> }
+
         const productId = parseInt(this.props.match.params.productId, 10)
         const product = this.state.products.find(
             product => product.id === productId
         )
+
+        console.log(product)
 
         return (
             <div>

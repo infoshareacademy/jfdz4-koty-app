@@ -42,7 +42,7 @@ const App = () => (
 
             <Route path="/logIn" component={MyComponent}/>
             <Route path="/Search" component={Products}/>
-            <Route path="/Search/:productId" component={ProductDetails}/>
+            <Route path="/products/:productId" component={ProductDetails}/>
         </Grid>
     </Router>
 )
