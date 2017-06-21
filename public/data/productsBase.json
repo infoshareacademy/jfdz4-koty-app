@@ -1,171 +1,171 @@
 [
   {
     "id": 1,
-    "image": "http://dummyimage.com/100x100.png/cc0000/ffffff",
+    "image": "https://raw.githubusercontent.com/infoshareacademy/jfdz4-koty-app/develop/image/deska%20do%20krojenia.jpg",
     "name": "Deska do krojenia",
-    "price": "PLN40.90",
+    "price": "40.90 PLN",
     "review": 1
   },
   {
     "id": 2,
-    "image": "http://dummyimage.com/100x100.bmp/ff4444/ffffff",
+    "image": "https://raw.githubusercontent.com/infoshareacademy/jfdz4-koty-app/develop/image/dywan.jpg",
     "name": "Dywan",
-    "price": "PLN200.45",
+    "price": "200.45 PLN",
     "review": 1
   },
   {
     "id": 3,
-    "image": "http://dummyimage.com/100x100.bmp/cc0000/ffffff",
+    "image": "https://raw.githubusercontent.com/infoshareacademy/jfdz4-koty-app/develop/image/fotel.jpg",
     "name": "Fotel",
-    "price": "PLN810.99",
+    "price": "810.99 PLN",
     "review": 1
   },
   {
     "id": 4,
-    "image": "http://dummyimage.com/100x100.bmp/ff4444/ffffff",
+    "image": "https://raw.githubusercontent.com/infoshareacademy/jfdz4-koty-app/develop/image/grill.jpg",
     "name": "Grill",
-    "price": "PLN37.15",
+    "price": "37.15 PLN",
     "review": 3
   },
   {
     "id": 5,
-    "image": "http://dummyimage.com/100x100.jpg/ff4444/ffffff",
+    "image": "https://raw.githubusercontent.com/infoshareacademy/jfdz4-koty-app/develop/image/hamak.jpg",
     "name": "Hamak",
-    "price": "PLN300.45",
+    "price": "300.45 PLN",
     "review": 4
   },
   {
     "id": 6,
-    "image": "http://dummyimage.com/100x100.bmp/ff4444/ffffff",
+    "image": "https://raw.githubusercontent.com/infoshareacademy/jfdz4-koty-app/develop/image/iphone.jpg",
     "name": "iPhone",
-    "price": "PLN2000.67",
+    "price": "2000.67 PLN",
     "review": 1
   },
   {
     "id": 7,
-    "image": "http://dummyimage.com/100x100.jpg/cc0000/ffffff",
+    "image": "https://raw.githubusercontent.com/infoshareacademy/jfdz4-koty-app/develop/image/kawiarka.jpg",
     "name": "Kawiarka",
-    "price": "PLN68.81",
+    "price": "68.81 PLN",
     "review": 1
   },
   {
     "id": 8,
-    "image": "http://dummyimage.com/100x100.png/5fa2dd/ffffff",
+    "image": "https://raw.githubusercontent.com/infoshareacademy/jfdz4-koty-app/develop/image/kosiarka.jpg",
     "name": "Kosiarka",
-    "price": "PLN1200.40",
+    "price": "1200.40 PLN",
     "review": 4
   },
   {
     "id": 9,
-    "image": "http://dummyimage.com/100x100.png/5fa2dd/ffffff",
+    "image": "https://raw.githubusercontent.com/infoshareacademy/jfdz4-koty-app/develop/image/kuchenka%20mikrofalowa.jpg",
     "name": "Kuchenka mikrofalowa",
-    "price": "PLN830.25",
+    "price": "830.25 PLN",
     "review": 1
   },
   {
     "id": 10,
-    "image": "http://dummyimage.com/100x100.jpg/5fa2dd/ffffff",
+    "image": "https://raw.githubusercontent.com/infoshareacademy/jfdz4-koty-app/develop/image/lampa%20wiszaca.jpg",
     "name": "Lampa wisząca",
-    "price": "PLN480.74",
+    "price": "480.74 PLN",
     "review": 4
   },
   {
     "id": 11,
-    "image": "http://dummyimage.com/100x100.bmp/5fa2dd/ffffff",
+    "image": "https://raw.githubusercontent.com/infoshareacademy/jfdz4-koty-app/develop/image/lezak.jpg",
     "name": "Leżak",
-    "price": "PLN70.98",
+    "price": "70.98 PLN",
     "review": 5
   },
   {
     "id": 12,
-    "image": "http://dummyimage.com/100x100.jpg/cc0000/ffffff",
+    "image": "https://raw.githubusercontent.com/infoshareacademy/jfdz4-koty-app/develop/image/longboard.jpg",
     "name": "Longboard",
-    "price": "PLN480.27",
+    "price": "480.27 PLN",
     "review": 1
   },
   {
     "id": 13,
-    "image": "http://dummyimage.com/100x100.jpg/dddddd/000000",
+    "image": "https://raw.githubusercontent.com/infoshareacademy/jfdz4-koty-app/develop/image/maszyna%20do%20pisania.jpg",
     "name": "Maszyna do pisania",
-    "price": "PLN200.84",
+    "price": "200.84 PLN",
     "review": 1
   },
   {
     "id": 14,
-    "image": "http://dummyimage.com/100x100.png/ff4444/ffffff",
+    "image": "https://raw.githubusercontent.com/infoshareacademy/jfdz4-koty-app/develop/image/mikser.jpg",
     "name": "Mikser",
-    "price": "PLN340.72",
+    "price": "340.72 PLN",
     "review": 3
   },
   {
     "id": 15,
-    "image": "http://dummyimage.com/100x100.png/dddddd/000000",
+    "image": "https://raw.githubusercontent.com/infoshareacademy/jfdz4-koty-app/develop/image/namiot.jpg",
     "name": "Namiot",
-    "price": "PLN370.98",
+    "price": "370.98 PLN",
     "review": 5
   },
   {
     "id": 16,
-    "image": "http://dummyimage.com/100x100.png/dddddd/000000",
+    "image": "https://raw.githubusercontent.com/infoshareacademy/jfdz4-koty-app/develop/image/narty.jpg",
     "name": "Narty",
-    "price": "PLN630.52",
+    "price": "630.52 PLN",
     "review": 2
   },
   {
     "id": 17,
-    "image": "http://dummyimage.com/100x100.bmp/5fa2dd/ffffff",
+    "image": "https://raw.githubusercontent.com/infoshareacademy/jfdz4-koty-app/develop/image/odkurzacz.jpg",
     "name": "Odkurzacz",
-    "price": "PLN300.03",
+    "price": "300.03 PLN",
     "review": 1
   },
   {
     "id": 18,
-    "image": "http://dummyimage.com/100x100.png/ff4444/ffffff",
+    "image": "https://raw.githubusercontent.com/infoshareacademy/jfdz4-koty-app/develop/image/pralka.jpg",
     "name": "Pralka",
-    "price": "PLN940.56",
+    "price": "940.56 PLN",
     "review": 1
   },
   {
     "id": 19,
-    "image": "http://dummyimage.com/100x100.png/5fa2dd/ffffff",
+    "image": "https://raw.githubusercontent.com/infoshareacademy/jfdz4-koty-app/develop/image/pufa%20worek.jpg",
     "name": "Pufa worek",
-    "price": "PLN512.60",
+    "price": "512.60 PLN",
     "review": 2
   },
 
   {
     "id": 20,
-    "image": "http://dummyimage.com/100x100.jpg/dddddd/000000",
+    "image": "https://raw.githubusercontent.com/infoshareacademy/jfdz4-koty-app/develop/image/rower.jpg",
     "name": "Rower",
-    "price": "PLN740.12",
+    "price": "740.12 PLN",
     "review": 2
-  }
+  },
   {
     "id": 21,
-    "image": "http://dummyimage.com/100x100.jpg/dddddd/000000",
+    "image": "https://raw.githubusercontent.com/infoshareacademy/jfdz4-koty-app/develop/image/suszarka.jpg",
     "name": "Suszarka",
-    "price": "PLN74.12",
+    "price": "74.12 PLN",
     "review": 2
-  }
+  },
   {
     "id": 22,
-    "image": "http://dummyimage.com/100x100.jpg/dddddd/000000",
+    "image": "https://raw.githubusercontent.com/infoshareacademy/jfdz4-koty-app/develop/image/tapeta.jpg",
     "name": "Tapeta",
-    "price": "PLN74.12",
+    "price": "74.12 PLN",
     "review": 2
-  }
+  },
   {
     "id": 23,
-    "image": "http://dummyimage.com/100x100.jpg/dddddd/000000",
+    "image": "https://raw.githubusercontent.com/infoshareacademy/jfdz4-koty-app/develop/image/wiertarka.jpg",
     "name": "Wiertarka",
-    "price": "PLN324.12",
+    "price": "324.12 PLN",
     "review": 2
-  }
+  },
   {
     "id": 24,
-    "image": "http://dummyimage.com/100x100.jpg/dddddd/000000",
+    "image": "https://raw.githubusercontent.com/infoshareacademy/jfdz4-koty-app/develop/image/zegar.jpg",
     "name": "Zegar",
-    "price": "PLN74.12",
+    "price": "74.12PLN",
     "review": 2
   }
 ]

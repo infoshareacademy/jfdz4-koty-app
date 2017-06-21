@@ -3,6 +3,8 @@ import { connect } from 'react-redux'
 import { Table} from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
+import './App.css'
+
 export default connect(
     state => ({
         products: state.products,
