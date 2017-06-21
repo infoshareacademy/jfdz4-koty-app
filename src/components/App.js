@@ -13,6 +13,7 @@ import {
 import {IndexLinkContainer, LinkContainer} from 'react-router-bootstrap'
 
 import Products from './Search'
+import ProductDetails from './ProductDetails'
 import MyComponent from './logIn';
 import './App.css'
 
@@ -40,7 +41,8 @@ const App = () => (
 
 
             <Route path="/logIn" component={MyComponent}/>
-            <Route path="/Search" component={Products}/>
+            <Route exact path="/Search" component={Products}/>
+            <Route path="/Search/:productId" component={ProductDetails}/>
         </Grid>
     </Router>
 )
