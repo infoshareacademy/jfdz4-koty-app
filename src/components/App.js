@@ -17,25 +17,23 @@ import ProductDetails from './ProductDetails'
 import MyComponent from './logIn';
 import './App.css'
 
-
 const App = () => (
     <Router>
         <Grid>
-            <Navbar>
+            <Navbar fluid inverse>
                 <Nav>
                     <IndexLinkContainer to="/">
-                        <NavItem>Home</NavItem>
+                        <NavItem>LOGO KOTÓW</NavItem>
                     </IndexLinkContainer>
 
                     <LinkContainer to="/Search">
                         <NavItem>Szukaj produktów!</NavItem>
                     </LinkContainer>
-
+                </Nav>
+                <Nav pullRight>
                     <LinkContainer to="/logIn">
                         <NavItem>Zaloguj się</NavItem>
                     </LinkContainer>
-
-
                 </Nav>
             </Navbar>
 
