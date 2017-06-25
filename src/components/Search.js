@@ -61,7 +61,7 @@ export default connect(
                                                         products.filter(
                                                             product => searchPhrase === '' ? false : (
                                                                 searchPhrase.split('').every(
-                                                                    letter => product.name.toLowerCase().includes(letter.toLowerCase())
+                                                                    letter => product.name.toLowerCase().includes(searchPhrase.toLowerCase())
                                                                 )
                                                             )
                                                         ).slice(0, 10).map(
