@@ -29,7 +29,6 @@ class Product extends React.Component {
             product => product.id === productId
         )
 
-        console.log(product)
 
         return (
 
@@ -38,9 +37,9 @@ class Product extends React.Component {
                     <div>
                         <h1> {product.name} </h1>
                         <img src={product.image}/>
-                        <p> Ocena klientów: {product.price}</p>
-                        <p> OPIS: </p>
-                        <p> Super najlepsza rzecz na świecie! </p>
+                        <p>Cena: {product.price}</p>
+                        <p> Ocena klientów: {product.review}</p>
+                        <p> OPIS: Super najlepsza rzecz na świecie! </p>
                     </div>
                 }
             </div>
