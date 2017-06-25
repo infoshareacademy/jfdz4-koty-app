@@ -59,7 +59,7 @@ export default connect(
                                                     === null ?
                                                         null :
                                                         products.filter(
-                                                            product => searchPhrase === '' ? false : (
+                                                            product => searchPhrase.length < 2  ? false : (
                                                                 searchPhrase.split('').every(
                                                                     letter => product.name.toLowerCase().includes(searchPhrase.toLowerCase())
                                                                 )
