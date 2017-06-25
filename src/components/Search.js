@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { Table} from 'react-bootstrap'
+import { Table } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
 import './App.css'
@@ -39,7 +39,8 @@ export default connect(
             return (
                 <div>
                     <div>
-                        <input value={searchPhrase} onChange={setSearchPhrase}/>
+                        <h4>Czego dzisiaj szukasz?</h4>
+                        <input style={{width: '100%', margin: '0 0 30px 0' }} value={searchPhrase} onChange={setSearchPhrase}/>
                         <ul>
                             {
 
@@ -50,7 +51,7 @@ export default connect(
                                                     <th>NAZWA PRODUKTU</th>
                                                     <th>CENA</th>
                                                     <th>OCENA</th>
-                                                    <th>SZCZEGOŁY PRODUKTU</th>
+                                                    <th>AKCJE</th>
                                                 </tr>
                                                 </thead>
                                                 <tbody >
@@ -68,9 +69,12 @@ export default connect(
                                                         product => <tr key={product.id}>
                                                             <td style={{verticalAlign: 'middle'}}><img src={product.image}/></td>
                                                             <td style={{verticalAlign: 'middle'}}>{product.name}</td>
-                                                            <td style={{verticalAlign: 'middle'}}>{product.price}</td>
+                                                            <td style={{verticalAlign: 'middle'}}><p><strong>Allegro: </strong>{product.price_allegro}</p><p><strong>Ceneo: </strong>{product.price_ceneo}</p><p><strong>Ebay: </strong>{product.price_ebay}</p></td>
                                                             <td style={{verticalAlign: 'middle'}}>{product.review} / 5</td>
-                                                            <td style={{verticalAlign: 'middle'}}><Link to={'/products/' + product.id}>Szczegóły</Link></td>
+                                                            <td style={{verticalAlign: 'middle'}}>
+                                                                <p><Link to={'/products/' + product.id}>Szczegóły</Link></p>
+                                                                    <p><Link to={'/products/' + product.id}>Zapisz wyszukiwanie</Link></p>
+                                                            </td>
                                                         </tr>
                                                     )
                                                 }
