@@ -81,7 +81,7 @@ class logIn extends React.Component {
                 </form>
                 <button type="submit" onClick={this.facebookLogin}>Zaloguj przez facebooka</button>
                 <button onClick={this.loggingOut}>Wyloguj</button>
-                <button onClick={this.userLogged}>poka usera</button>
+                <button onClick={this.userLogged}>poka usera i email w konsoli</button>
             </div>
         )
     }
