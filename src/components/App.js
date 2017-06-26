@@ -14,8 +14,8 @@ import {IndexLinkContainer, LinkContainer} from 'react-router-bootstrap'
 
 import Products from './Search'
 import ProductDetails from './ProductDetails'
-import MyComponent from './logIn';
-import SignUpForm from './SignUp';
+import MyComponent from './logIn'
+import SignUpForm from './SignUp'
 import './App.css'
 
 
@@ -45,7 +45,7 @@ const App = () => (
             </Navbar>
 
 
-            <Route path="/logIn" component={MyComponent}/>
+            <Route path="/SignUp" component={SignUp}/>
             <Route exact path="/Search" component={Products}/>
             <Route path="/Search/:productId" component={ProductDetails}/>
         </Grid>

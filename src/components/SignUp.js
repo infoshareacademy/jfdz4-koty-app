@@ -1,7 +1,7 @@
 import React from 'react'
 import firebase from 'firebase'
 
-export default class SignUpForm extends React.Component {
+export default class SignUp extends React.Component {
 
     state = {
         email: '',
