@@ -6,7 +6,7 @@ import './App.css'
 
 export default connect(
     state => ({
-        favorite: state.favorite
+        favorite: state.addFavorite
     }),
     dispatch => ({
         setSearchPhrase: event => dispatch({
