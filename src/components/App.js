@@ -1,8 +1,7 @@
 import React from 'react';
 import {
     BrowserRouter as Router,
-    Route,
-    Link
+    Route
 } from 'react-router-dom'
 import {
     Nav,
@@ -12,10 +11,11 @@ import {
 } from 'react-bootstrap'
 import {IndexLinkContainer, LinkContainer} from 'react-router-bootstrap'
 
+
 import Intro from './Intro'
 import Products from './Search'
 import ProductDetails from './ProductDetails'
-import MyComponent from './logIn';
+import logIn from './logIn';
 import './App.css'
 
 const App = () => (
@@ -38,9 +38,8 @@ const App = () => (
                 </Nav>
             </Navbar>
 
-            <Intro/>
-
-            <Route path="/logIn" component={MyComponent}/>
+            <Route exact path="/" component={Intro}/>
+            <Route path="/logIn" component={logIn}/>
             <Route path="/Search" component={Products}/>
             <Route path="/products/:productId" component={ProductDetails}/>
         </Grid>
