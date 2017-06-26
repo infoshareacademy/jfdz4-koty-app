@@ -1,5 +1,5 @@
 const initialState = {
-    setFavorite: ''
+    addFavorite: 'japczko'
 }
 
 export default (state = initialState, action) => {
@@ -7,7 +7,7 @@ export default (state = initialState, action) => {
         case 'products/ADD_FAVORITE':
             return {
                 ...state,
-                setFavorite: action.d
+                addFavorite: action.addFavorite
             }
         default:
             return state

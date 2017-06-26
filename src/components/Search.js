@@ -19,9 +19,9 @@ export default connect(
             type: 'products/FETCH__SUCCESS',
             data: data
         }),
-        addFavorite: value => dispatch({
+        addFavorite: event => dispatch({
             type: 'products/ADD_FAVORITE',
-            addFavorite: value
+            addFavorite: event.target.value
         })
 
     })
