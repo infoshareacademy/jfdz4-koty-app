@@ -6,8 +6,7 @@ import './App.css'
 
 export default connect(
     state => ({
-        products: state.products,
-        searchPhrase: state.productsSearching.searchPhrase
+        favorite: state.favorite
     }),
     dispatch => ({
         setSearchPhrase: event => dispatch({
@@ -32,6 +31,7 @@ export default connect(
         }
 
         render() {
+
 
 
 

@@ -16,6 +16,7 @@ import Products from './Search'
 import ProductDetails from './ProductDetails'
 import MyComponent from './logIn';
 import './App.css'
+import List from './List'
 
 const App = () => (
     <Router>
@@ -41,6 +42,7 @@ const App = () => (
             <Route path="/logIn" component={MyComponent}/>
             <Route path="/Search" component={Products}/>
             <Route path="/products/:productId" component={ProductDetails}/>
+            <Route path="/favorite" component={List}/>
         </Grid>
     </Router>
 )

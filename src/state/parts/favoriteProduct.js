@@ -7,7 +7,7 @@ export default (state = initialState, action) => {
         case 'products/ADD_FAVORITE':
             return {
                 ...state,
-                setFavorite: action.value
+                setFavorite: action.d
             }
         default:
             return state
