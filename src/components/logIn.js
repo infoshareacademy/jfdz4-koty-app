@@ -10,7 +10,10 @@ const config = {
     messagingSenderId: "364801817856"
 };
 
+const provider = new firebase.auth.FacebookAuthProvider();
+
 firebase.initializeApp(config);
+
 
 class logIn extends React.Component {
 
@@ -18,7 +21,7 @@ class logIn extends React.Component {
         login: '',
         password: '',
         logged: '',
-        passworded: ''
+        passworded: '',
     }
 
     handleChange = event => this.setState({
@@ -35,10 +38,23 @@ class logIn extends React.Component {
         firebase.auth().signInWithEmailAndPassword(this.state.logged, this.state.passworded)
     }
 
+    facebookLogin = () => {
+        firebase.auth().signInWithRedirect(provider);
+    }
+
+    userLogged = () => {
+        console.log(firebase.auth().currentUser)
+        console.log(firebase.auth().currentUser.email)
+    }
+
+    loggingOut = () => {
+        firebase.auth().signOut()
+    }
+
+
     render() {
         return (
             <div>
-
                 <form>
                     <input type="text" value={this.state.login} name="login" placeholder="Login" onChange={this.handleChange} />
                     <input type="password" value={this.state.password} name="password" placeholder="Haslo" onChange={this.handleChange} />
@@ -50,7 +66,9 @@ class logIn extends React.Component {
                     <input type="password" value={this.state.passworded} name="passworded" placeholder="Haslo" onChange={this.handleChange} />
                     <button type="submit" onClick={this.handleLogin}>Zaloguj się</button>
                 </form>
-
+                <button type="submit" onClick={this.facebookLogin}>Zaloguj przez facebooka</button>
+                <button onClick={this.loggingOut}>Wyloguj</button>
+                <button onClick={this.userLogged}>poka usera</button>
             </div>
         )
     }

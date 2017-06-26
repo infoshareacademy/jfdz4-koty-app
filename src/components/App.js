@@ -18,7 +18,10 @@ import ProductDetails from './ProductDetails'
 import logIn from './logIn';
 import './App.css'
 
+const user = null
+
 const App = () => (
+
     <Router>
         <Grid>
             <Navbar fluid inverse>
@@ -26,10 +29,11 @@ const App = () => (
                     <IndexLinkContainer to="/">
                         <NavItem>LOGO KOTÓW</NavItem>
                     </IndexLinkContainer>
-
+                    {user=== null ? <p style={{color: 'white'}}>musisz sie zalogowac zeby korzystac z wyszukiwarki</p> :
                     <LinkContainer to="/Search">
                         <NavItem>Szukaj produktów!</NavItem>
                     </LinkContainer>
+                    }
                 </Nav>
                 <Nav pullRight>
                     <LinkContainer to="/logIn">
