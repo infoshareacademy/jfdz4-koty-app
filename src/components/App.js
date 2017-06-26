@@ -12,37 +12,37 @@ import {
 } from 'react-bootstrap'
 import {IndexLinkContainer, LinkContainer} from 'react-router-bootstrap'
 
+import Intro from './Intro'
 import Products from './Search'
 import ProductDetails from './ProductDetails'
 import MyComponent from './logIn';
 import './App.css'
 
-
 const App = () => (
     <Router>
         <Grid>
-            <Navbar>
+            <Navbar fluid inverse>
                 <Nav>
                     <IndexLinkContainer to="/">
-                        <NavItem>Home</NavItem>
+                        <NavItem>LOGO KOTÓW</NavItem>
                     </IndexLinkContainer>
 
                     <LinkContainer to="/Search">
                         <NavItem>Szukaj produktów!</NavItem>
                     </LinkContainer>
-
+                </Nav>
+                <Nav pullRight>
                     <LinkContainer to="/logIn">
                         <NavItem>Zaloguj się</NavItem>
                     </LinkContainer>
-
-
                 </Nav>
             </Navbar>
 
+            <Intro/>
 
             <Route path="/logIn" component={MyComponent}/>
-            <Route exact path="/Search" component={Products}/>
-            <Route path="/Search/:productId" component={ProductDetails}/>
+            <Route path="/Search" component={Products}/>
+            <Route path="/products/:productId" component={ProductDetails}/>
         </Grid>
     </Router>
 )

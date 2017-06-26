@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default class Product extends React.Component {
+class Product extends React.Component {
 
     constructor(props) {
         super(props)
@@ -23,21 +23,31 @@ export default class Product extends React.Component {
 
     render() {
 
+
         const productId = parseInt(this.props.match.params.productId, 10)
         const product = this.state.products.find(
             product => product.id === productId
         )
 
-        return (
-            <div>
-                <h1> {product.name} </h1>
-                <img src={product.image}/>
-                <p> Ocena klientów: {product.price}</p>
-                <p> OPIS: </p>
-                <p> Super najlepsza rzecz na świecie! </p>
+        console.log(product)
 
+        return (
+
+            <div>
+                {product === undefined ? <div> Fetching</div> :
+                    <div>
+                        <h1> {product.name} </h1>
+                        <img src={product.image}/>
+                        <p> Ocena klientów: {product.price}</p>
+                        <p> OPIS: </p>
+                        <p> Super najlepsza rzecz na świecie! </p>
+                    </div>
+                }
             </div>
         )
-
     }
 }
+
+
+
+export default Product
