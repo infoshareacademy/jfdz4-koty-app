@@ -12,6 +12,7 @@ import {
 } from 'react-bootstrap'
 import {IndexLinkContainer, LinkContainer} from 'react-router-bootstrap'
 
+import Intro from './Intro'
 import Products from './Search'
 import ProductDetails from './ProductDetails'
 import MyComponent from './logIn';
@@ -37,6 +38,7 @@ const App = () => (
                 </Nav>
             </Navbar>
 
+            <Intro/>
 
             <Route path="/logIn" component={MyComponent}/>
             <Route path="/Search" component={Products}/>
