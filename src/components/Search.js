@@ -9,6 +9,7 @@ export default connect(
     state => ({
         products: state.products,
         searchPhrase: state.productsSearching.searchPhrase
+        setFavorite: state.
     }),
     dispatch => ({
         setSearchPhrase: event => dispatch({
@@ -18,7 +19,12 @@ export default connect(
         success: data => dispatch({
             type: 'products/FETCH__SUCCESS',
             data: data
+        }),
+        addFavorite: value => dispatch({
+            type: 'products/ADD_FAVORITE',
+            value: value
         })
+
     })
 )(
     class Products extends React.Component {
@@ -36,6 +42,7 @@ export default connect(
             const products = this.props.products.data
             const searchPhrase = this.props.searchPhrase
             const setSearchPhrase = this.props.setSearchPhrase
+            const saveFavorite = this.props.setFavorite
             return (
                 <div>
                     <div>
@@ -73,7 +80,7 @@ export default connect(
                                                             <td style={{verticalAlign: 'middle'}}>{product.review} / 5</td>
                                                             <td style={{verticalAlign: 'middle'}}>
                                                                 <p><Link to={'/products/' + product.id}>Szczegóły</Link></p>
-                                                                    <p><Link to={'/products/' + product.id}>Zapisz wyszukiwanie</Link></p>
+                                                                    <p onClick={saveFavorite} value={product.id}><Link to={'/products/' + product.id}>Zapisz wyszukiwanie</Link></p>
                                                             </td>
                                                         </tr>
                                                     )
