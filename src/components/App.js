@@ -1,8 +1,7 @@
 import React from 'react';
 import {
     BrowserRouter as Router,
-    Route,
-    Link
+    Route
 } from 'react-router-dom'
 import {
     Nav,
@@ -12,13 +11,17 @@ import {
 } from 'react-bootstrap'
 import {IndexLinkContainer, LinkContainer} from 'react-router-bootstrap'
 
+
 import Intro from './Intro'
 import Products from './Search'
 import ProductDetails from './ProductDetails'
-import MyComponent from './logIn';
+import logIn from './logIn';
 import './App.css'
 
+const user = null
+
 const App = () => (
+
     <Router>
         <Grid>
             <Navbar fluid inverse>
@@ -26,10 +29,11 @@ const App = () => (
                     <IndexLinkContainer to="/">
                         <NavItem>LOGO KOTÓW</NavItem>
                     </IndexLinkContainer>
-
+                    {user=== null ? <p style={{color: 'white'}}>musisz sie zalogowac zeby korzystac z wyszukiwarki</p> :
                     <LinkContainer to="/Search">
                         <NavItem>Szukaj produktów!</NavItem>
                     </LinkContainer>
+                    }
                 </Nav>
                 <Nav pullRight>
                     <LinkContainer to="/logIn">
@@ -38,9 +42,8 @@ const App = () => (
                 </Nav>
             </Navbar>
 
-            <Intro/>
-
-            <Route path="/logIn" component={MyComponent}/>
+            <Route exact path="/" component={Intro}/>
+            <Route path="/logIn" component={logIn}/>
             <Route path="/Search" component={Products}/>
             <Route path="/products/:productId" component={ProductDetails}/>
         </Grid>
