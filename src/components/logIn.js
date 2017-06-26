@@ -22,6 +22,7 @@ class logIn extends React.Component {
         password: '',
         logged: '',
         passworded: '',
+        user: ''
     }
 
     handleChange = event => this.setState({
@@ -30,21 +31,33 @@ class logIn extends React.Component {
 
     handleSubmit = event => {
         event.preventDefault()
-        firebase.auth().createUserWithEmailAndPassword(this.state.login, this.state.password)
+        firebase.auth().createUserWithEmailAndPassword(this.state.login, this.state.password).then(
+        this.setState({
+            user: firebase.auth().currentUser.email
+        }))
     }
 
     handleLogin = event => {
         event.preventDefault()
-        firebase.auth().signInWithEmailAndPassword(this.state.logged, this.state.passworded)
+        firebase.auth().signInWithEmailAndPassword(this.state.logged, this.state.passworded).then(
+        this.setState({
+            user: firebase.auth().currentUser.email
+        }))
     }
 
-    facebookLogin = () => {
-        firebase.auth().signInWithRedirect(provider);
+    facebookLogin = event => {
+        event.preventDefault()
+        firebase.auth().signInWithPopup(provider).then(
+            this.setState({
+                user: firebase.auth().currentUser.email
+            }))
     }
+
 
     userLogged = () => {
         console.log(firebase.auth().currentUser)
         console.log(firebase.auth().currentUser.email)
+        console.log(this.state.user)
     }
 
     loggingOut = () => {
