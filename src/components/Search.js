@@ -8,8 +8,8 @@ import './App.css'
 export default connect(
     state => ({
         products: state.products,
-        searchPhrase: state.productsSearching.searchPhrase
-        setFavorite: state.
+        searchPhrase: state.productsSearching.searchPhrase,
+        setFavorite: state.value
     }),
     dispatch => ({
         setSearchPhrase: event => dispatch({
@@ -42,7 +42,7 @@ export default connect(
             const products = this.props.products.data
             const searchPhrase = this.props.searchPhrase
             const setSearchPhrase = this.props.setSearchPhrase
-            const saveFavorite = this.props.setFavorite
+            const saveFavorite = this.props.addFavorite
             return (
                 <div>
                     <div>
