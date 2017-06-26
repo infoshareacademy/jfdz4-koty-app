@@ -20,9 +20,9 @@ export default connect(
             type: 'products/FETCH__SUCCESS',
             data: data
         }),
-        addFavorite: event => dispatch({
+        addFavorite: item => dispatch({
             type: 'products/ADD_FAVORITE',
-            addFavorite: event.target.value
+            addFavorite: item
         })
 
     })
@@ -80,7 +80,7 @@ export default connect(
                                                             <td style={{verticalAlign: 'middle'}}>{product.review} / 5</td>
                                                             <td style={{verticalAlign: 'middle'}}>
                                                                 <p><Link to={'/products/' + product.id}>Szczegóły</Link></p>
-                                                                    <p onClick={addFavorite} value={product.id}><Link to={'/favorites'}>Zapisz wyszukiwanie</Link></p>
+                                                                    <p onClick={() => addFavorite(product.id)}><Link to={'/favorites'}>Zapisz wyszukiwanie</Link></p>
                                                             </td>
                                                         </tr>
                                                     )
