@@ -16,7 +16,9 @@ class logIn extends React.Component {
 
     state = {
         login: '',
-        password: ''
+        password: '',
+        logged: '',
+        passworded: ''
     }
 
     handleChange = event => this.setState({
@@ -28,6 +30,11 @@ class logIn extends React.Component {
         firebase.auth().createUserWithEmailAndPassword(this.state.login, this.state.password)
     }
 
+    handleLogin = event => {
+        event.preventDefault()
+        firebase.auth().signInWithEmailAndPassword(this.state.logged, this.state.passworded)
+    }
+
     render() {
         return (
             <div>
@@ -36,6 +43,12 @@ class logIn extends React.Component {
                     <input type="text" value={this.state.login} name="login" placeholder="Login" onChange={this.handleChange} />
                     <input type="password" value={this.state.password} name="password" placeholder="Haslo" onChange={this.handleChange} />
                     <button type="submit" onClick={this.handleSubmit}>Zarejestruj się</button>
+                </form>
+
+                <form>
+                    <input type="text" value={this.state.logged} name="logged" placeholder="Login" onChange={this.handleChange} />
+                    <input type="password" value={this.state.passworded} name="passworded" placeholder="Haslo" onChange={this.handleChange} />
+                    <button type="submit" onClick={this.handleLogin}>Zaloguj się</button>
                 </form>
 
             </div>
