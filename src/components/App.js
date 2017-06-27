@@ -29,16 +29,19 @@ const App = () => (
                     <IndexLinkContainer to="/">
                         <NavItem>LOGO KOTÓW</NavItem>
                     </IndexLinkContainer>
-                    {user=== null ? <p style={{color: 'white'}}>musisz sie zalogowac zeby korzystac z wyszukiwarki</p> :
+                    {user=== null ? <NavItem style={{color: 'white'}}>musisz sie zalogowac zeby korzystac z wyszukiwarki</NavItem> :
                     <LinkContainer to="/Search">
                         <NavItem>Szukaj produktów!</NavItem>
                     </LinkContainer>
                     }
                 </Nav>
                 <Nav pullRight>
-                    <LinkContainer to="/logIn">
-                        <NavItem>Zaloguj się</NavItem>
-                    </LinkContainer>
+                    {user === null ?
+                        <LinkContainer to="/logIn">
+                            <NavItem>Zalogowany jako: tutaj-email</NavItem>
+                        </LinkContainer> :
+                        <NavItem style={{color: 'white'}}>Zalogowany jako: tutaj-email</NavItem>
+                    }
                 </Nav>
             </Navbar>
 
