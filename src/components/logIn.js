@@ -47,10 +47,7 @@ class logIn extends React.Component {
 
     facebookLogin = event => {
         event.preventDefault()
-        firebase.auth().signInWithPopup(provider).then(
-            this.setState({
-                user: firebase.auth().currentUser.email
-            }))
+        firebase.auth().signInWithPopup(provider)
     }
 
 
@@ -62,6 +59,18 @@ class logIn extends React.Component {
 
     loggingOut = () => {
         firebase.auth().signOut()
+    }
+
+    componentDidMount() {
+        firebase.auth().onAuthStateChanged((user) => {
+            if (user) {
+                this.setState({
+                    user: firebase.auth().currentUser.email
+                });
+            } else {
+                console.log('Not logged in')
+            }
+        });
     }
 
 
