@@ -36,9 +36,12 @@ const App = () => (
                     }
                 </Nav>
                 <Nav pullRight>
-                    <LinkContainer to="/logIn">
-                        <NavItem>Zaloguj się</NavItem>
-                    </LinkContainer>
+                    {user === null ?
+                        <LinkContainer to="/logIn">
+                            <NavItem>Zalogowany jako: tutaj-email</NavItem>
+                        </LinkContainer> :
+                        <NavItem style={{color: 'white'}}>Zalogowany jako: tutaj-email</NavItem>
+                    }
                 </Nav>
             </Navbar>
 
