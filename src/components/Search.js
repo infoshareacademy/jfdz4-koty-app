@@ -9,7 +9,7 @@ export default connect(
     state => ({
         products: state.products,
         searchPhrase: state.productsSearching.searchPhrase,
-        addFavorite: state.addFavorite
+        addFavorite: state.favoriteItem.addFavorite
     }),
     dispatch => ({
         setSearchPhrase: event => dispatch({

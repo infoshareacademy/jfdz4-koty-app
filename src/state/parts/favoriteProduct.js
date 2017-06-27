@@ -1,5 +1,5 @@
 const initialState = {
-    addFavorite: ''
+    addFavorite: null
 }
 
 export default (state = initialState, action) => {
