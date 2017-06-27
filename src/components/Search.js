@@ -21,7 +21,7 @@ export default connect(
             data: data
         }),
         addFavorite: item => dispatch({
-            type: 'products/ADD_FAVORITE',
+            type: 'products/ADD__FAVORITE',
             addFavorite: item
         })
 

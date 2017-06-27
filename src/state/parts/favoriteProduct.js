@@ -4,7 +4,7 @@ const initialState = {
 
 export default (state = initialState, action) => {
     switch(action.type) {
-        case 'products/ADD_FAVORITE':
+        case 'products/ADD__FAVORITE':
             return {
                 ...state,
                 addFavorite: action.item

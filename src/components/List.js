@@ -6,14 +6,10 @@ import './App.css'
 
 export default connect(
     state => ({
-        products: state.products
-        favorite: state.addFavorite
+        products: state.products,
+        addFavorite: state.addFavorite
     }),
     dispatch => ({
-        setSearchPhrase: event => dispatch({
-            type: 'productsSearching/SET_SEARCH_PHRASE',
-            searchPhrase: event.target.value
-        }),
         success: data => dispatch({
             type: 'products/FETCH__SUCCESS',
             data: data
