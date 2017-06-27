@@ -29,10 +29,11 @@ const App = () => (
                     <IndexLinkContainer to="/">
                         <NavItem>LOGO KOTÓW</NavItem>
                     </IndexLinkContainer>
-                    {user=== null ? <NavItem style={{color: 'white'}}>musisz sie zalogowac zeby korzystac z wyszukiwarki</NavItem> :
+                    {user=== null ?
                     <LinkContainer to="/Search">
                         <NavItem>Szukaj produktów!</NavItem>
-                    </LinkContainer>
+                    </LinkContainer> :
+                        <NavItem style={{color: 'white'}}>musisz sie zalogowac zeby korzystac z wyszukiwarki</NavItem>
                     }
                 </Nav>
                 <Nav pullRight>
