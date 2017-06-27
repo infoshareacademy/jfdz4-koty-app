@@ -6,6 +6,7 @@ import './App.css'
 
 export default connect(
     state => ({
+        products: state.products
         favorite: state.addFavorite
     }),
     dispatch => ({
@@ -31,6 +32,7 @@ export default connect(
         }
 
         render() {
+            const products = this.props.products.data
 
 
 
