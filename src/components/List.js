@@ -1,13 +1,14 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { Table } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 
 import './App.css'
 
 export default connect(
     state => ({
-        products: state.products,
-        addFavorite: state.addFavorite
+        addFavorite: state.favoriteItem.addFavorite
     }),
     dispatch => ({
         success: data => dispatch({
@@ -16,20 +17,47 @@ export default connect(
         })
     })
 )(
-    class Products extends React.Component {
+    class Lista extends React.Component {
         componentWillMount() {
-            fetch(
-                `${process.env.PUBLIC_URL}/data/productsBase.json`
-            ).then(
-                response => response.json().then(
-                    data => this.props.success(data)
-                )
-            )
+
         }
 
         render() {
-            const products = this.props.products.data
 
+            const products= this.props.addFavorite
+
+             return (
+                 <Table striped bordered condensed hover style={{textAlign: 'center'}}>
+                     <thead>
+                     <tr>
+                         <th>ZDJĘCIE</th>
+                         <th>NAZWA PRODUKTU</th>
+                         <th>CENA</th>
+                         <th>OCENA</th>
+                         <th>AKCJE</th>
+                     </tr>
+                     </thead>
+                     <tbody >
+                     {
+                         products
+                         === null ?
+                             null :
+                             products.map(
+                                 product => <tr key={product.id}>
+                                     <td style={{verticalAlign: 'middle'}}><img src={product.image}/></td>
+                                     <td style={{verticalAlign: 'middle'}}>{product.name}</td>
+                                     <td style={{verticalAlign: 'middle'}}><p><strong>Allegro: </strong>{product.price_allegro}</p><p><strong>Ceneo: </strong>{product.price_ceneo}</p><p><strong>Ebay: </strong>{product.price_ebay}</p></td>
+                                     <td style={{verticalAlign: 'middle'}}>{product.review} / 5</td>
+                                     <td style={{verticalAlign: 'middle'}}>
+                                         <p><Link to={'/products/' + product.id}>Szczegóły</Link></p>
+                                         <p onClick={() => addFavorite(product.id)}><Link to={'/favorites'}>Zapisz wyszukiwanie</Link></p>
+                                     </td>
+                                 </tr>
+                             )
+                     }
+                     </tbody>
+                 </Table>
+             )
 
 
 
