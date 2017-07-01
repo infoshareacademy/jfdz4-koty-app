@@ -6,6 +6,8 @@ const opts = {
     width: '640',
     playerVars: {
         autoplay: 0,
+        modestbranding: 1,
+        showinfo: 0,
     }
 }
 
