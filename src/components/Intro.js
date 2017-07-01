@@ -18,8 +18,8 @@ export default class Intro extends React.Component {
         return (
             <div style={{textAlign: 'center'}}>
                 <h1>KOTY APP - PORÓWNYWARKA CENOWA</h1>
-                <p>Aplikacja, która pozwala Ci oszczędzić!</p>
-                <p>Znajdź produkty najlepszej jakości topowych marek w dobrej cenie. </p>
+                <p>Aplikacja, która pozwala oszczędzać!</p>
+                <p>Znajdź produkty najlepszej jakości topowych marek, w dobrej cenie. </p>
                 <p>Wystarczy, że wpiszesz nazwę produktu, którego szukasz i możesz oddać się szalonym zakupom wśród rasowych kotów.</p>
                 <p>Enjoy:)</p>
 
