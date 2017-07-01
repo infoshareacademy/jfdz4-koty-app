@@ -4,9 +4,12 @@
     font-family: Lato;
 }
 
-body  {
-    background-image: url("https://raw.githubusercontent.com/infoshareacademy/jfdz4-koty/develop/Koty-StronaGlowna/tlo.jpg");
-    background-size: auto;
+body {
+    background: url(https://raw.githubusercontent.com/infoshareacademy/jfdz4-koty/develop/Koty-StronaGlowna/tlo.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 
