@@ -32,6 +32,10 @@ td > img {
     height: 100px;
 }
 
+th {
+    text-align: center;
+}
+
 .navbar-inverse {
     font-weight: 700;
     text-transform: uppercase;
