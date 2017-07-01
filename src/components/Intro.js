@@ -8,6 +8,7 @@ const opts = {
         autoplay: 0,
         modestbranding: 1,
         showinfo: 0,
+        rel: 0,
     }
 }
 
