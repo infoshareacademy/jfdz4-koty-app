@@ -10,7 +10,7 @@ export default class Intro extends React.Component {
                 Enjoy:)
 
                 <button>Przejdź do aplikacji</button>
-                <img src="jfdz4-koty-app/public/data/image/hajs.jpg" alt="kupa szmalu"/>
+                <img src="https://raw.githubusercontent.com/infoshareacademy/jfdz4-koty-app/txt_pic_button4intro/public/data/image/hajs.jpg" alt="kupa szmalu"/>
             </div>
 
 
