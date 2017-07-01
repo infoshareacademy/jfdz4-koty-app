@@ -55,16 +55,12 @@ class logIn extends React.Component {
 
 
     userLogged = () => {
-        console.log("User jako cały:")
-        console.log(firebase.auth().currentUser)
-        console.log("User e-mail:")
-        console.log(firebase.auth().currentUser.email)
-        console.log("User e-mail w state")
-        console.log(this.state.user)
+        toastr.success('zalogowano jako ' + this.state.user)
     }
 
     loggingOut = () => {
         firebase.auth().signOut()
+        toastr.success('Wylogowano poprawnie')
     }
 
     componentDidMount() {
@@ -73,9 +69,9 @@ class logIn extends React.Component {
                 this.setState({
                     user: firebase.auth().currentUser.email
                 });
-                toastr.success('Zalogowano poprawnie')
+                toastr.success('Zalogowano poprawnie ' + this.state.user)
             } else {
-               toastr.warning('Musisz się zalogować')
+               toastr.warning('Musisz się zalogować aby korzystać z wyszukiwarki')
             }
         });
     }
