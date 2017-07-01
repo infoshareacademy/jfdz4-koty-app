@@ -88,3 +88,20 @@ input:hover {
     border: 2px black solid;
     border-radius: 20px;
 }
+
+.hiperlacze a {
+    font-weight: 700;
+    color: #21324f;
+    transition: 1s;
+}
+
+.hiperlacze a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.szukajka {
+    text-align: center;
+    font-weight: 700;
+    margin: 20px;
+}

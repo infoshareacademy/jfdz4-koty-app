@@ -1,5 +1,6 @@
 import React from 'react';
 import firebase from 'firebase'
+import toastr from 'toastr'
 
 import './App.css'
 
@@ -72,8 +73,9 @@ class logIn extends React.Component {
                 this.setState({
                     user: firebase.auth().currentUser.email
                 });
+                toastr.success('Zalogowano poprawnie')
             } else {
-                console.log('Wylogowany')
+               toastr.warning('Musisz się zalogować')
             }
         });
     }
