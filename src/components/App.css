@@ -1,6 +1,30 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: Lato;
+}
+
+body {
+    background: url(https://raw.githubusercontent.com/infoshareacademy/jfdz4-koty/develop/Koty-StronaGlowna/tlo.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+tbody > tr:hover {
+    background-color: rgba(33,50,79,0.2) !important;
+}
+
+.white {
+    background-color: rgba(255,255,255,0.7);
+    border-radius: 5px;
+    border: 5px black;
+    padding: 15px;
+}
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+    background-image: linear-gradient(to bottom, #21324f 0%, #222 100%);
 }
 
 td > img {
@@ -11,6 +35,16 @@ td > img {
 .navbar-inverse {
     font-weight: 700;
     text-transform: uppercase;
+    font-size: 16px;
+    line-height: 0;
+}
+
+.navbar-inverse {
+    background-image: linear-gradient(to bottom, #21324f 0%, #222 100%)
+}
+
+.navbar-nav > li > a {
+    line-height: 25px;
 }
 
 button, input {
@@ -23,7 +57,7 @@ button, input {
 }
 
 input:hover {
-    background-color: lightskyblue;
+    background-color: lightsteelblue;
 }
 
 .center {
@@ -33,18 +67,41 @@ input:hover {
 
 .logowanie  {
     color: white;
-    background-color: #333;
+    background-image: linear-gradient(to bottom, #21324f 0%, #222 100%);
     padding: 15px;
+    border: 2px black solid;
+    border-radius: 20px;
 }
 
 .rejestracja {
     color: white;
-    background-color: black;
     padding: 15px;
+    background-image: linear-gradient(to bottom, #21324f 0%, #222 100%);
+    border: 2px black solid;
+    border-radius: 20px;
 }
 
 .facebook {
-    background-color: #4267b2;
     color: white;
     padding: 15px;
+    background-image: linear-gradient(to bottom, #21324f 0%, #222 100%);
+    border: 2px black solid;
+    border-radius: 20px;
+}
+
+.hiperlacze a {
+    font-weight: 700;
+    color: #21324f;
+    transition: 1s;
+}
+
+.hiperlacze a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.szukajka {
+    text-align: center;
+    font-weight: 700;
+    margin: 20px;
 }

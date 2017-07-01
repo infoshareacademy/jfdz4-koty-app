@@ -1,5 +1,6 @@
 import React from 'react';
 import firebase from 'firebase'
+import toastr from 'toastr'
 
 import './App.css'
 
@@ -54,16 +55,14 @@ class logIn extends React.Component {
 
 
     userLogged = () => {
-        console.log("User jako cały:")
-        console.log(firebase.auth().currentUser)
-        console.log("User e-mail:")
-        console.log(firebase.auth().currentUser.email)
-        console.log("User e-mail w state")
-        console.log(this.state.user)
+        toastr.success('zalogowano jako ' + this.state.user)
     }
 
     loggingOut = () => {
-        firebase.auth().signOut()
+        firebase.auth().signOut().then(this.setState({
+            user: ''
+        }))
+        toastr.success('Wylogowano poprawnie')
     }
 
     componentDidMount() {
@@ -72,8 +71,9 @@ class logIn extends React.Component {
                 this.setState({
                     user: firebase.auth().currentUser.email
                 });
+                toastr.success('Zalogowano poprawnie ' + this.state.user)
             } else {
-                console.log('Wylogowany')
+               toastr.warning('Musisz się zalogować aby korzystać z wyszukiwarki')
             }
         });
     }
@@ -81,7 +81,8 @@ class logIn extends React.Component {
 
     render() {
         return (
-            <div>
+            this.state.user === "" ?
+            <div className="row">
                 <div className="col-xs-12 col-sm-4  center">
                     <div className="rejestracja">
                     <form>
@@ -111,12 +112,14 @@ class logIn extends React.Component {
                 <div className="col-xs-12 col-sm-4 center">
                     <div className="facebook">
                     <h4> ZALOGUJ PRZEZ FACEBOOKA </h4>
-                    <button type="submit" onClick={this.facebookLogin}>Zaloguj przez facebooka</button>
-                    <button onClick={this.loggingOut}>Wyloguj</button>
-                    <button onClick={this.userLogged}>poka usera i jego email w konsoli</button>
+                    <button type="submit" onClick={this.facebookLogin}>Logowanie</button>
                     </div>
                 </div>
-            </div>
+            </div> :
+                <div>
+                <p>Uzytkownik zalogowany jako {this.state.user} </p>
+                <button onClick={this.loggingOut}>Wyloguj</button>
+                </div>
         )
     }
 }
