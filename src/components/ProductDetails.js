@@ -32,11 +32,11 @@ class Product extends React.Component {
 
         return (
 
-            <div style={{color: '#21324f', boxShadow: '4px 4px 44px #999999'}}>
+            <div style={{color: '#21324f', boxShadow: '9px 9px 29px #21324f'}}>
                 {product === undefined ? <div> Fetching</div> :
                     <div>
                         <h1 style={{fontFamily: 'Verdana', fontWeight: 'bold'}}> {product.name} </h1>
-                        <img src={product.image}/>
+                        <img src={product.image} style={{paddingLeft: '1px', border: '1px solid #21324f', boxShadow: '4px 0px 29px #21324f'}}/>
                         <p style = {{fontFamily: 'Verdana', fontWeight: 'bold', fontSize: '22px'}}>Cena: {product.price}</p>
                         <p style = {{fontFamily: 'Verdana', fontSize: '20px'}}> Ocena klientów: {product.review}</p>
                         <p style = {{fontFamily: 'Verdana', fontSize: '20px', fontWeight: 'bold'}}> OPIS: Super najlepsza rzecz na świecie! </p>
