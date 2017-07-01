@@ -1,7 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { Table } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
 
 
 import './App.css'
@@ -18,7 +17,7 @@ export default connect(
 
         render() {
 
-            const products = this.props.addFavorite
+            const favoriteProduct = this.props.addFavorite
 
              return (
                  <Table striped bordered condensed hover style={{textAlign: 'center'}}>
@@ -33,13 +32,15 @@ export default connect(
                      </thead>
                      <tbody >
                      {
-                       <tr key={products.id}>
-                                     <td style={{verticalAlign: 'middle'}}><img src={products.image}/></td>
-                                     <td style={{verticalAlign: 'middle'}}>{products.name}</td>
-                                     <td style={{verticalAlign: 'middle'}}><p><strong>Allegro: </strong>{products.price_allegro}</p><p><strong>Ceneo: </strong>{products.price_ceneo}</p><p><strong>Ebay: </strong>{products.price_ebay}</p></td>
-                                     <td style={{verticalAlign: 'middle'}}>{products.review} / 5</td>
+
+                         console.log(favoriteProduct),
+                       <tr>
+                                     <td style={{verticalAlign: 'middle'}}><img src={favoriteProduct.image}/></td>
+                                     <td style={{verticalAlign: 'middle'}}>{favoriteProduct.name}</td>
+                                     <td style={{verticalAlign: 'middle'}}><p><strong>Allegro: </strong>{favoriteProduct.price_allegro}</p><p><strong>Ceneo: </strong>{favoriteProduct.price_ceneo}</p><p><strong>Ebay: </strong>{favoriteProduct.price_ebay}</p></td>
+                                     <td style={{verticalAlign: 'middle'}}>{favoriteProduct.review} / 5</td>
                                      <td style={{verticalAlign: 'middle'}}>
-                                         <p><Link to={'/products/' + products.id}>Szczegóły</Link></p>
+                                         <p><Link to={'/products/' + favoriteProduct.id}>Szczegóły</Link></p>
 
                                      </td>
                                  </tr>
