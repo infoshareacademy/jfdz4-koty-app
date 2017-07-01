@@ -80,7 +80,7 @@ export default connect(
                                                             <td style={{verticalAlign: 'middle'}}>{product.review} / 5</td>
                                                             <td style={{verticalAlign: 'middle'}}>
                                                                 <p><Link to={'/products/' + product.id}>Szczegóły</Link></p>
-                                                                    <p onClick={() => addFavorite(product)}><Link to={'/favorites'}>Zapisz wyszukiwanie</Link></p>
+                                                                    <p onClick={() => addFavorite(product)}><Link to={'/favorite'}>Zapisz wyszukiwanie</Link></p>
                                                             </td>
                                                         </tr>
                                                     )

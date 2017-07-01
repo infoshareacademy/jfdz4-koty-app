@@ -9,12 +9,6 @@ import './App.css'
 export default connect(
     state => ({
         addFavorite: state.favoriteItem
-    }),
-    dispatch => ({
-        success: data => dispatch({
-            type: 'products/FETCH__SUCCESS',
-            data: data
-        })
     })
 )(
     class Lista extends React.Component {
@@ -24,7 +18,7 @@ export default connect(
 
         render() {
 
-            const products= this.props.addFavorite
+            const products = this.props.addFavorite
 
              return (
                  <Table striped bordered condensed hover style={{textAlign: 'center'}}>
@@ -39,21 +33,17 @@ export default connect(
                      </thead>
                      <tbody >
                      {
-                         products
-                         === null ?
-                             null :
-                             products.map(
-                                 product => <tr key={product.id}>
-                                     <td style={{verticalAlign: 'middle'}}><img src={product.image}/></td>
-                                     <td style={{verticalAlign: 'middle'}}>{product.name}</td>
-                                     <td style={{verticalAlign: 'middle'}}><p><strong>Allegro: </strong>{product.price_allegro}</p><p><strong>Ceneo: </strong>{product.price_ceneo}</p><p><strong>Ebay: </strong>{product.price_ebay}</p></td>
-                                     <td style={{verticalAlign: 'middle'}}>{product.review} / 5</td>
+                       <tr key={products.id}>
+                                     <td style={{verticalAlign: 'middle'}}><img src={products.image}/></td>
+                                     <td style={{verticalAlign: 'middle'}}>{products.name}</td>
+                                     <td style={{verticalAlign: 'middle'}}><p><strong>Allegro: </strong>{products.price_allegro}</p><p><strong>Ceneo: </strong>{products.price_ceneo}</p><p><strong>Ebay: </strong>{products.price_ebay}</p></td>
+                                     <td style={{verticalAlign: 'middle'}}>{products.review} / 5</td>
                                      <td style={{verticalAlign: 'middle'}}>
-                                         <p><Link to={'/products/' + product.id}>Szczegóły</Link></p>
+                                         <p><Link to={'/products/' + products.id}>Szczegóły</Link></p>
 
                                      </td>
                                  </tr>
-                             )
+
                      }
                      </tbody>
                  </Table>
