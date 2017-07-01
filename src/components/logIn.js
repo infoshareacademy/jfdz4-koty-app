@@ -59,7 +59,9 @@ class logIn extends React.Component {
     }
 
     loggingOut = () => {
-        firebase.auth().signOut()
+        firebase.auth().signOut().then(this.setState({
+            user: ''
+        }))
         toastr.success('Wylogowano poprawnie')
     }
 
@@ -79,6 +81,7 @@ class logIn extends React.Component {
 
     render() {
         return (
+            this.state.user === "" ?
             <div className="row">
                 <div className="col-xs-12 col-sm-4  center">
                     <div className="rejestracja">
@@ -109,12 +112,14 @@ class logIn extends React.Component {
                 <div className="col-xs-12 col-sm-4 center">
                     <div className="facebook">
                     <h4> ZALOGUJ PRZEZ FACEBOOKA </h4>
-                    <button type="submit" onClick={this.facebookLogin}>Zaloguj przez facebooka</button>
-                    <button onClick={this.loggingOut}>Wyloguj</button>
-                    <button onClick={this.userLogged}>poka usera i jego email w konsoli</button>
+                    <button type="submit" onClick={this.facebookLogin}>Logowanie</button>
                     </div>
                 </div>
-            </div>
+            </div> :
+                <div>
+                <p>Uzytkownik zalogowany jako {this.state.user} </p>
+                <button onClick={this.loggingOut}>Wyloguj</button>
+                </div>
         )
     }
 }
