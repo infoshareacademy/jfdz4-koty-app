@@ -17,13 +17,14 @@ export default class Intro extends React.Component {
     render () {
         return (
             <div style={{textAlign: 'center'}}>
-                Aplikacja, która pozwala na oszczędności!
-                Wyszukujemy najlepszej jakości i w dobrej cenie produkty topowych marek.
-                Wystarczy, że wpiszesz nazwę produktu, którego szukasz i możesz oddać się szalonym zakupom wśród rasowych kotów.
-                Enjoy:)
+                <h1> PORÓWNYWARKA KOTY APP </h1>
+                <p> Aplikacja, która pozwala na oszczędności!</p>
+                <p> Wyszukujemy najlepszej jakości i w dobrej cenie produkty topowych marek.</p>
+                <p>Wystarczy, że wpiszesz nazwę produktu, którego szukasz i możesz oddać się szalonym zakupom wśród rasowych kotów.</p>
+                <p> Enjoy:)</p>
 
                 {/*<img style={{width: '100%', borderRadius:'20px'}} src="https://raw.githubusercontent.com/infoshareacademy/jfdz4-koty-app/txt_pic_button4intro/public/data/image/hajs.jpg" alt="kupa szmalu"/>*/}
-                <div style={{borderRadius: "20px", border: '5px solid black', backgroundColor: 'black'}}>
+                <div>
                 <YouTube
                     videoId="WRDBSKquWyw"
                     opts={opts}
