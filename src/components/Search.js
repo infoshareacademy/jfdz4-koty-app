@@ -8,7 +8,8 @@ import './App.css'
 export default connect(
     state => ({
         products: state.products,
-        searchPhrase: state.productsSearching.searchPhrase
+        searchPhrase: state.productsSearching.searchPhrase,
+        addFavorite: state.favoriteItem.addFavorite
     }),
     dispatch => ({
         setSearchPhrase: event => dispatch({
@@ -18,12 +19,17 @@ export default connect(
         success: data => dispatch({
             type: 'products/FETCH__SUCCESS',
             data: data
+        }),
+        addFavorite: item => dispatch({
+            type: 'products/ADD__FAVORITE',
+            addFavorite: item
         })
+
     })
 )(
     class Products extends React.Component {
         componentWillMount() {
-            fetch(
+           fetch(
                 `${process.env.PUBLIC_URL}/data/productsBase.json`
             ).then(
                 response => response.json().then(
@@ -32,10 +38,13 @@ export default connect(
             )
         }
 
+
+
         render() {
             const products = this.props.products.data
             const searchPhrase = this.props.searchPhrase
             const setSearchPhrase = this.props.setSearchPhrase
+            const addFavorite = this.props.addFavorite
             return (
                 <div>
                     <div>
@@ -60,9 +69,9 @@ export default connect(
                                                     === null ?
                                                         null :
                                                         products.filter(
-                                                            product => searchPhrase === '' ? false : (
+                                                            product => searchPhrase.length < 2  ? false : (
                                                                 searchPhrase.split('').every(
-                                                                    letter => product.name.toLowerCase().includes(letter.toLowerCase())
+                                                                    letter => product.name.toLowerCase().includes(searchPhrase.toLowerCase())
                                                                 )
                                                             )
                                                         ).slice(0, 10).map(
@@ -73,7 +82,10 @@ export default connect(
                                                             <td style={{verticalAlign: 'middle'}}>{product.review} / 5</td>
                                                             <td style={{verticalAlign: 'middle'}}>
                                                                 <p className="hiperlacze"><Link to={'/products/' + product.id}>Szczegóły</Link></p>
-                                                                    <p  className="hiperlacze"><Link to={'/products/' + product.id}>Zapisz wyszukiwanie</Link></p>
+                                                                    <p className="hiperlacze" onClick={() => {
+                                                                        addFavorite(product)
+                                                                    }}>
+                                                                        <Link to={'/favorite'}>Zapisz wyszukiwanie</Link></p>
                                                             </td>
                                                         </tr>
                                                     )

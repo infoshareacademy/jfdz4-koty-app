@@ -29,7 +29,6 @@ class Product extends React.Component {
             product => product.id === productId
         )
 
-        console.log(product)
 
         return (
 
@@ -37,10 +36,10 @@ class Product extends React.Component {
                 {product === undefined ? <div> Fetching</div> :
                     <div>
                         <h1> {product.name} </h1>
-                        <img alt="costam" src={product.image}/>
-                        <p> Ocena klientów: {product.price}</p>
-                        <p> OPIS: </p>
-                        <p> Super najlepsza rzecz na świecie! </p>
+                        <img src={product.image}/>
+                        <p>Cena: {product.price}</p>
+                        <p> Ocena klientów: {product.review}</p>
+                        <p> OPIS: Super najlepsza rzecz na świecie! </p>
                     </div>
                 }
             </div>

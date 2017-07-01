@@ -1,7 +1,8 @@
 import React from 'react';
 import {
     BrowserRouter as Router,
-    Route
+    Route,
+    Link
 } from 'react-router-dom'
 import {
     Nav,
@@ -17,6 +18,7 @@ import Products from './Search'
 import ProductDetails from './ProductDetails'
 import logIn from './logIn';
 import './App.css'
+import List from './List'
 
 const user = null
 
@@ -51,6 +53,7 @@ const App = () => (
             <Route path="/logIn" component={logIn}/>
             <Route path="/Search" component={Products}/>
             <Route path="/products/:productId" component={ProductDetails}/>
+            <Route path="/favorite" component={List}/>
             </div>
         </Grid>
     </Router>
