@@ -8,7 +8,7 @@ export default class startSearch extends React.Component {
 
         <div className="loader">
             {
-                setTimeout( () => (this.props.history.push('/Search')), 1500)
+                setTimeout( () => (this.props.history.push('/Search')), 1000)
             }
         </div>
 

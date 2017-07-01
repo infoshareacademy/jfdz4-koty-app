@@ -70,7 +70,7 @@ export default connect(
                                         === null ?
                                             null :
                                             products.filter(
-                                                product => searchPhrase.length < 3  ? false : (
+                                                product => searchPhrase.length < 2  ? false : (
                                                     searchPhrase.split('').every(
                                                         letter => product.name.toLowerCase().includes(letter.toLowerCase())
                                                     )
