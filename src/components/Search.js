@@ -9,7 +9,7 @@ export default connect(
     state => ({
         products: state.products,
         searchPhrase: state.productsSearching.searchPhrase,
-        addFavorite: state.favoriteItem.addFavoriteaddFavorite
+        addFavorite: state.favoriteItem.addFavorite
     }),
     dispatch => ({
         setSearchPhrase: event => dispatch({
@@ -29,7 +29,7 @@ export default connect(
 )(
     class Products extends React.Component {
         componentWillMount() {
-            fetch(
+           fetch(
                 `${process.env.PUBLIC_URL}/data/productsBase.json`
             ).then(
                 response => response.json().then(
@@ -37,6 +37,8 @@ export default connect(
                 )
             )
         }
+
+
 
         render() {
             const products = this.props.products.data
@@ -80,7 +82,10 @@ export default connect(
                                                             <td style={{verticalAlign: 'middle'}}>{product.review} / 5</td>
                                                             <td style={{verticalAlign: 'middle'}}>
                                                                 <p><Link to={'/products/' + product.id}>Szczegóły</Link></p>
-                                                                    <p onClick={() => addFavorite(product)}><Link to={'/favorite'}>Zapisz wyszukiwanie</Link></p>
+                                                                    <p onClick={() => {
+                                                                        addFavorite(product)
+                                                                    }}>
+                                                                        <Link to={'/favorite'}>Zapisz wyszukiwanie</Link></p>
                                                             </td>
                                                         </tr>
                                                     )
