@@ -47,7 +47,7 @@
   {
     "id": 6,
     "image": "https://raw.githubusercontent.com/infoshareacademy/jfdz4-koty-app/develop/image/iphone.jpg",
-    "name": "iPhone",
+    "name": "iPhone 5",
     "price_allegro": 2000.67,
     "price_ceneo": 1899.99,
     "price_ebay":  2059.99,
@@ -215,5 +215,41 @@
     "price_ceneo": 54.34,
     "price_ebay":  23.54,
     "review": 3.07
+  },
+  {
+    "id": 25,
+    "image": "https://raw.githubusercontent.com/infoshareacademy/jfdz4-koty-app/develop/image/zegar.jpg",
+    "name": "Zegar Casio",
+    "price_allegro": 32.23,
+    "price_ceneo": 44.34,
+    "price_ebay":  38.64,
+    "review": 4.1
+  },
+  {
+  "id": 26,
+  "image": "https://raw.githubusercontent.com/infoshareacademy/jfdz4-koty-app/develop/image/iphone.jpg",
+  "name": "iPhone 5S",
+  "price_allegro": 2042.97,
+  "price_ceneo": 1955.44,
+  "price_ebay":  2159.39,
+  "review": 4.85
+  },
+  {
+    "id": 27,
+    "image": "https://raw.githubusercontent.com/infoshareacademy/jfdz4-koty-app/develop/image/iphone.jpg",
+    "name": "iPhone 6",
+    "price_allegro": 2605.47,
+    "price_ceneo": 2509.11,
+    "price_ebay":  2590.88,
+    "review": 4.78
+  },
+  {
+    "id": 28,
+    "image": "https://raw.githubusercontent.com/infoshareacademy/jfdz4-koty-app/develop/image/iphone.jpg",
+    "name": "iPhone 7",
+    "price_allegro": 3011.67,
+    "price_ceneo": 2999.99,
+    "price_ebay":  3059.99,
+    "review": 5
   }
 ]
