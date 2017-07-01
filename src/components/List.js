@@ -1,6 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {Table} from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 
 import './App.css'
@@ -8,7 +9,7 @@ import './App.css'
 export default connect(
     state => ({
         addFavorite: state.favoriteItem
-    })
+    }),
 )(
     class Lista extends React.Component {
         componentWillMount() {
