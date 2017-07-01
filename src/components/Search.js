@@ -74,7 +74,7 @@ export default connect(
                                                             )
                                                         ).slice(0, 10).map(
                                                         product => <tr key={product.id}>
-                                                            <td style={{verticalAlign: 'middle'}}><img src={product.image}/></td>
+                                                            <td style={{verticalAlign: 'middle'}}><img style={{borderRadius: '15px'}} alt="costam" src={product.image}/></td>
                                                             <td style={{verticalAlign: 'middle'}}>{product.name}</td>
                                                             <td style={{verticalAlign: 'middle'}}><p><strong>Allegro: </strong>{product.price_allegro}</p><p><strong>Ceneo: </strong>{product.price_ceneo}</p><p><strong>Ebay: </strong>{product.price_ebay}</p></td>
                                                             <td style={{verticalAlign: 'middle'}}>{product.review} / 5</td>
