@@ -38,7 +38,7 @@ class Product extends React.Component {
                         <a href="/Search"><img src="https://raw.githubusercontent.com/infoshareacademy/jfdz4-koty-app/productDetails-style/public/data/image/arrowBack.jpg" style={{float: 'left', height: '40px', width: '40px', marginRight: '20px'}}/></a>
                         <h1 style={{fontFamily: 'Verdana', fontWeight: 'bold'}}> {product.name} </h1>
                         <img src={product.image} style={{paddingLeft: '1px', border: '1px solid #21324f', boxShadow: '4px 0px 29px #21324f'}}/>
-                        <p style = {{fontFamily: 'Verdana', fontWeight: 'bold', fontSize: '22px'}}>Cena: {product.price}</p>
+                        <p style = {{fontFamily: 'Verdana', fontWeight: '700', fontSize: '27px', color: '#FF7D00'}}>Cena: {product.price}</p>
                         <p style = {{fontFamily: 'Verdana', fontSize: '20px'}}> Ocena klientów: {product.review}</p>
                         <p style = {{fontFamily: 'Verdana', fontSize: '20px', fontWeight: 'bold'}}> OPIS: Super najlepsza rzecz na świecie! </p>
                     </div>
