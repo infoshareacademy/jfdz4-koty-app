@@ -39,7 +39,7 @@ export default connect(
             return (
                 <div>
                     <div>
-                        <h4>Czego dzisiaj szukasz?</h4>
+                        <h4 className="szukajka">Czego dzisiaj szukasz?</h4>
                         <input style={{width: '100%', margin: '0 0 30px 0' }} value={searchPhrase} onChange={setSearchPhrase}/>
                         <ul>
                             {
@@ -72,8 +72,8 @@ export default connect(
                                                             <td style={{verticalAlign: 'middle'}}><p><strong>Allegro: </strong>{product.price_allegro}</p><p><strong>Ceneo: </strong>{product.price_ceneo}</p><p><strong>Ebay: </strong>{product.price_ebay}</p></td>
                                                             <td style={{verticalAlign: 'middle'}}>{product.review} / 5</td>
                                                             <td style={{verticalAlign: 'middle'}}>
-                                                                <p><Link to={'/products/' + product.id}>Szczegóły</Link></p>
-                                                                    <p><Link to={'/products/' + product.id}>Zapisz wyszukiwanie</Link></p>
+                                                                <p className="hiperlacze"><Link to={'/products/' + product.id}>Szczegóły</Link></p>
+                                                                    <p  className="hiperlacze"><Link to={'/products/' + product.id}>Zapisz wyszukiwanie</Link></p>
                                                             </td>
                                                         </tr>
                                                     )
