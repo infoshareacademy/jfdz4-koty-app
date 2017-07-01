@@ -34,7 +34,9 @@ class logIn extends React.Component {
 
     handleSubmit = event => {
         event.preventDefault()
-        firebase.auth().createUserWithEmailAndPassword(this.state.login, this.state.password).then(
+        firebase.auth().createUserWithEmailAndPassword(this.state.login, this.state.password).catch(function(error) {
+            toastr.error('Ten email jest już używany');
+        }).then(
             this.setState({
                 user: firebase.auth().currentUser.email
             }))
@@ -42,7 +44,9 @@ class logIn extends React.Component {
 
     handleLogin = event => {
         event.preventDefault()
-        firebase.auth().signInWithEmailAndPassword(this.state.logged, this.state.passworded).then(
+        firebase.auth().signInWithEmailAndPassword(this.state.logged, this.state.passworded).catch(function(error) {
+            toastr.error('Błędny login lub hasło')
+        }).then(
             this.setState({
                 user: firebase.auth().currentUser.email
             }))
