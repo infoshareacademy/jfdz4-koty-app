@@ -26,7 +26,7 @@ export default class Intro extends React.Component {
                 {/*<img style={{width: '100%', borderRadius:'20px'}} src="https://raw.githubusercontent.com/infoshareacademy/jfdz4-koty-app/txt_pic_button4intro/public/data/image/hajs.jpg" alt="kupa szmalu"/>*/}
                 <div>
                 <YouTube
-                    videoId="QlF_TTKwiB4"
+                    videoId="JnJbDhdWfqk"
                     opts={opts}
                     onReady={this._onReady}
                 />
