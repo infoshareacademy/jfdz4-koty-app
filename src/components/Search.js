@@ -9,7 +9,7 @@ export default connect(
     state => ({
         products: state.products,
         searchPhrase: state.productsSearching.searchPhrase,
-        addFavorite: state.favoriteItem.addFavorite
+        addFavorite: state.favoriteItem.addFavoriteaddFavorite
     }),
     dispatch => ({
         setSearchPhrase: event => dispatch({
@@ -80,7 +80,7 @@ export default connect(
                                                             <td style={{verticalAlign: 'middle'}}>{product.review} / 5</td>
                                                             <td style={{verticalAlign: 'middle'}}>
                                                                 <p><Link to={'/products/' + product.id}>Szczegóły</Link></p>
-                                                                    <p onClick={() => addFavorite(product.id)}><Link to={'/favorites'}>Zapisz wyszukiwanie</Link></p>
+                                                                    <p onClick={() => addFavorite(product)}><Link to={'/favorites'}>Zapisz wyszukiwanie</Link></p>
                                                             </td>
                                                         </tr>
                                                     )

@@ -8,7 +8,7 @@ import './App.css'
 
 export default connect(
     state => ({
-        addFavorite: state.favoriteItem.addFavorite
+        addFavorite: state.favoriteItem
     }),
     dispatch => ({
         success: data => dispatch({
@@ -50,7 +50,7 @@ export default connect(
                                      <td style={{verticalAlign: 'middle'}}>{product.review} / 5</td>
                                      <td style={{verticalAlign: 'middle'}}>
                                          <p><Link to={'/products/' + product.id}>Szczegóły</Link></p>
-                                         <p onClick={() => addFavorite(product.id)}><Link to={'/favorites'}>Zapisz wyszukiwanie</Link></p>
+
                                      </td>
                                  </tr>
                              )
