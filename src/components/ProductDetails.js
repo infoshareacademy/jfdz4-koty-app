@@ -32,14 +32,14 @@ class Product extends React.Component {
 
         return (
 
-            <div>
+            <div style={{color: '#21324f', boxShadow: '4px 4px 44px #999999'}}>
                 {product === undefined ? <div> Fetching</div> :
                     <div>
-                        <h1> {product.name} </h1>
+                        <h1 style={{fontFamily: 'Verdana', fontWeight: 'bold'}}> {product.name} </h1>
                         <img src={product.image}/>
-                        <p>Cena: {product.price}</p>
-                        <p> Ocena klientów: {product.review}</p>
-                        <p> OPIS: Super najlepsza rzecz na świecie! </p>
+                        <p style = {{fontFamily: 'Verdana', fontWeight: 'bold', fontSize: '22px'}}>Cena: {product.price}</p>
+                        <p style = {{fontFamily: 'Verdana', fontSize: '20px'}}> Ocena klientów: {product.review}</p>
+                        <p style = {{fontFamily: 'Verdana', fontSize: '20px', fontWeight: 'bold'}}> OPIS: Super najlepsza rzecz na świecie! </p>
                     </div>
                 }
             </div>
