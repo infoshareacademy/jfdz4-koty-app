@@ -1,6 +1,7 @@
 import React from 'react';
 import firebase from 'firebase'
 import toastr from 'toastr'
+import {Link} from 'react-router-dom'
 
 import './App.css'
 
@@ -126,6 +127,7 @@ class logIn extends React.Component {
                 <div>
                 <p>Uzytkownik zalogowany jako {this.state.user} </p>
                 <button onClick={this.loggingOut}>Wyloguj</button>
+                    <Link to="/startSearch">Przejdz do sklepu</Link>
                 </div>
         )
     }
