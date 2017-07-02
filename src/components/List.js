@@ -46,20 +46,21 @@ export default connect(
                             <tbody >
                             {
 
-                                <tr>
-                                    <td style={{verticalAlign: 'middle'}}><img src={favoriteProduct.addFavorite.image}/></td>
-                                    <td style={{verticalAlign: 'middle'}}>{favoriteProduct.addFavorite.name}</td>
+                                favoriteProduct.addFavorite.map(
+                                    product => <tr key={product.id}>
+                                    <td style={{verticalAlign: 'middle'}}><img src={product.image}/></td>
+                                    <td style={{verticalAlign: 'middle'}}>{product.name}</td>
                                     <td style={{verticalAlign: 'middle'}}><p>
-                                        <strong>Allegro: </strong>{favoriteProduct.addFavorite.price_allegro}</p><p>
-                                        <strong>Ceneo: </strong>{favoriteProduct.addFavorite.price_ceneo}</p><p>
-                                        <strong>Ebay: </strong>{favoriteProduct.addFavorite.price_ebay}</p></td>
-                                    <td style={{verticalAlign: 'middle'}}>{favoriteProduct.addFavorite.review} / 5</td>
+                                        <strong>Allegro: </strong>{product.price_allegro}</p><p>
+                                        <strong>Ceneo: </strong>{product.price_ceneo}</p><p>
+                                        <strong>Ebay: </strong>{product.price_ebay}</p></td>
+                                    <td style={{verticalAlign: 'middle'}}>{product.review} / 5</td>
                                     <td style={{verticalAlign: 'middle'}}>
-                                        <p><Link to={'/products/' + favoriteProduct.addFavorite.id}>Szczegóły</Link></p>
+                                        <p><Link to={'/products/' + product.id}>Szczegóły</Link></p>
 
                                     </td>
                                 </tr>
-
+                                    )
                             }
                             </tbody>
                         </Table> : <p>Musisz kliknąć aby zobaczyć swoją listę</p>}
