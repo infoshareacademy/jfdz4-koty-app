@@ -77,9 +77,9 @@ export default connect(
                                                 )
                                             ).slice(0, 10).map(
                                                 product => <tr key={product.id}>
-                                                    <td style={{verticalAlign: 'middle'}}><img
+                                                    <td style={{verticalAlign: 'middle'}}><Link to={'/products/' + product.id}><img
                                                         style={{borderRadius: '10px', border: "1px #21324f solid"}}
-                                                        alt="costam" src={product.image}/></td>
+                                                        alt="costam" src={product.image}/></Link></td>
                                                     <td style={{verticalAlign: 'middle'}}>{product.name}</td>
                                                     <td style={{verticalAlign: 'middle'}}><p>
                                                         <strong>Allegro: </strong>{product.price_allegro} PLN</p><p><strong>Ceneo: </strong>{product.price_ceneo} PLN</p><p><strong>Ebay: </strong>{product.price_ebay} PLN</p></td>
