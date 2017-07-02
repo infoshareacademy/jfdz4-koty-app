@@ -27,7 +27,7 @@ tbody > tr:hover {
     background-image: linear-gradient(to bottom, #21324f 0%, #222 100%);
 }
 
-td > img {
+td img {
     width: 100px;
     height: 100px;
 }
