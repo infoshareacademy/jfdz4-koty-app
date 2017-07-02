@@ -47,15 +47,15 @@ export default connect(
                             {
 
                                 <tr>
-                                    <td style={{verticalAlign: 'middle'}}><img src={favoriteProduct.image}/></td>
-                                    <td style={{verticalAlign: 'middle'}}>{favoriteProduct.name}</td>
+                                    <td style={{verticalAlign: 'middle'}}><img src={favoriteProduct.addFavorite.image}/></td>
+                                    <td style={{verticalAlign: 'middle'}}>{favoriteProduct.addFavorite.name}</td>
                                     <td style={{verticalAlign: 'middle'}}><p>
-                                        <strong>Allegro: </strong>{favoriteProduct.price_allegro}</p><p>
-                                        <strong>Ceneo: </strong>{favoriteProduct.price_ceneo}</p><p>
-                                        <strong>Ebay: </strong>{favoriteProduct.price_ebay}</p></td>
-                                    <td style={{verticalAlign: 'middle'}}>{favoriteProduct.review} / 5</td>
+                                        <strong>Allegro: </strong>{favoriteProduct.addFavorite.price_allegro}</p><p>
+                                        <strong>Ceneo: </strong>{favoriteProduct.addFavorite.price_ceneo}</p><p>
+                                        <strong>Ebay: </strong>{favoriteProduct.addFavorite.price_ebay}</p></td>
+                                    <td style={{verticalAlign: 'middle'}}>{favoriteProduct.addFavorite.review} / 5</td>
                                     <td style={{verticalAlign: 'middle'}}>
-                                        <p><Link to={'/products/' + favoriteProduct.id}>Szczegóły</Link></p>
+                                        <p><Link to={'/products/' + favoriteProduct.addFavorite.id}>Szczegóły</Link></p>
 
                                     </td>
                                 </tr>
