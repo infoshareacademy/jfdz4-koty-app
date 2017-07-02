@@ -21,8 +21,7 @@ export default class Navigation extends React.Component {
                             alt="logo_koty" style={{width: 28, height: 28}}/></NavItem>
                     </IndexLinkContainer>
                     {
-                        <NavItem style={{color: 'white'}}>Musisz sie zalogowac żeby korzystać z
-                            wyszukiwarki</NavItem>
+                        <NavItem style={{color: 'white'}}>Wyszukiwarka dostępna po zalogowaniu</NavItem>
                     }
                 </Nav>
                 <Nav pullRight>

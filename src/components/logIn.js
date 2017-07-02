@@ -125,9 +125,9 @@ class logIn extends React.Component {
                 </div>
             </div> :
                 <div>
-                <p>Uzytkownik zalogowany jako {this.state.user} </p>
+                <h3>Użytkownik zalogowany jako {this.state.user} </h3>
+                 <button><Link to="/startSearch">Przejdz do sklepu</Link></button>
                 <button onClick={this.loggingOut}>Wyloguj</button>
-                    <Link to="/startSearch">Przejdz do sklepu</Link>
                 </div>
         )
     }

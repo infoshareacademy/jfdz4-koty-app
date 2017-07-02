@@ -166,7 +166,7 @@
     "image": "https://raw.githubusercontent.com/infoshareacademy/jfdz4-koty-app/develop/image/pufa%20worek.jpg",
     "name": "Pufa worek",
     "price_allegro": 254.65,
-    "price_ceneo": "Brak produktu",
+    "price_ceneo": 254.66,
     "price_ebay":  275.46,
     "review": 3.01
   },
@@ -175,7 +175,7 @@
     "id": 20,
     "image": "https://raw.githubusercontent.com/infoshareacademy/jfdz4-koty-app/develop/image/rower.jpg",
     "name": "Rower",
-    "price_allegro": "Brak produktu",
+    "price_allegro": 701.55,
     "price_ceneo": 665.47,
     "price_ebay":  675.46,
     "review": 4.01
