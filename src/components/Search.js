@@ -87,7 +87,7 @@ export default connect(
                                                         <p style={{color: 'bronze', fontWeight: '800'}}>
                                                             Najlepsza cena! </p><p style={{color: 'red', fontWeight: '600'}}>
                                                         {
-                                                                Math.min(product.price_allegro, product.price_ceneo, product.price_ebay) + ' PLN'
+                                                            Math.min(product.price_allegro, product.price_ceneo, product.price_ebay) + ' PLN'
                                                             }
                                                         </p>
                                                     </td>
