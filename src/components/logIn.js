@@ -18,6 +18,7 @@ const provider = new firebase.auth.FacebookAuthProvider();
 firebase.initializeApp(config);
 
 
+
 class logIn extends React.Component {
 
     state = {
