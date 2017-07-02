@@ -34,15 +34,23 @@ class Product extends React.Component {
         return (
 
 
-            <div style={{color: 'white', background: '#000d1a', boxShadow: '9px 9px 29px #21324f'}}>
+            <div style={{color: 'white', background: 'linear-gradient(180deg, rgba(0,13,26,1) 0%, rgba(0,128,128,0.5) 100%)', boxShadow: '9px 9px 29px #21324f'}}>
                 {product === undefined ? <div> Fetching</div> :
                     <div style={{border: '2px solid #FF7D00'}}>
-                        <Link to={'/Search'}><img src="https://raw.githubusercontent.com/infoshareacademy/jfdz4-koty-app/productDetails-style/public/data/image/arrowBack.jpg" style={{float: 'left', height: '40px', width: '40px', marginRight: '20px'}}/></Link>
-                        <h1 style={{fontFamily: 'Verdana', fontWeight: '800', color: '#FF7D00'}}> {product.name} </h1>
+                        <Link to={'/Search'}><img src="https://raw.githubusercontent.com/infoshareacademy/jfdz4-koty-app/productDetails-style/public/data/image/arrowBack.jpg" style={{float: 'left', height: '40px', width: '40px', marginLeft: '10px', marginTop: '10px', border: '2px solid orange', borderRadius: '10px'}}/></Link>
+                        <div className="center" style={{marginBottom: '30px'}}><h1 style={{textTransform: 'uppercase', fontFamily: 'Verdana', fontWeight: '800', color: '#FF7D00'}}> {product.name} </h1></div>
+                        <div className="row">
+                        <div className="col-xs-4">
                         <img src={product.image} style={{marginLeft: '4px', marginBottom: '8px', border: '1px solid #999999', boxShadow: '2px 2px 22px'}}/>
-                        <p style = {{fontFamily: 'Verdana', fontWeight: '700', fontSize: '27px', color: '#FF7D00'}}>Cena: {product.price}</p>
-                        <p style = {{fontFamily: 'Verdana', fontSize: '22px'}}> Ocena klientów: {product.review}</p>
-                        <p style = {{fontFamily: 'Verdana', fontSize: '18px', fontWeight: 'bold'}}> Opis produktu: {product.name} nr 1 na świecie! </p>
+                        </div>
+                        <div className="col-xs-6 col-xs-push-1">
+                        <p style = {{fontFamily: 'Verdana', fontWeight: '700', fontSize: '27px', color: 'white'}}>Najlepsza cena: {
+                            Math.min(product.price_allegro, product.price_ceneo, product.price_ebay) + ' PLN'
+                        }</p>
+                        <p style = {{fontFamily: 'Verdana', fontSize: '22px', color: 'silver'}}> Ocena klientów: {product.review}</p>
+                        <p style = {{fontFamily: 'Verdana', fontSize: '18px', fontWeight: 'bold'}}> Opis produktu: {product.name} - Najlepszy dostępny produkt na rynku. Innowacyjny i w ogóle super. </p>
+                        </div>
+                        </div>
                     </div>
                 }
             </div>
